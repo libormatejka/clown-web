@@ -1,0 +1,6 @@
+parameters:
+	doctrine:
+		host: mariadb
+		user: root
+		password: root
+		dbname: clownweb

@@ -1,0 +1,7 @@
+{block content}
+<article class="container">
+	<h1>{$page->getTitle()}</h1>
+	<div class="content-area">
+		{$page->getContent()|noescape}
+	</div>
+</article>

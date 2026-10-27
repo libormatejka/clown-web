@@ -1,0 +1,43 @@
+services:
+
+  mariadb:
+    image: mariadb:11.8.1-ubi9-rc
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=clownweb
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - 3307:3306
+
+  php:
+    build:
+      context: ./..
+      dockerfile: ./.docker/php/Dockerfile
+    working_dir: /srv
+    volumes:
+      - ./../:/srv:delegated
+    environment:
+      - NETTE_DEBUG=true
+
+  node:
+    build:
+      context: ./..
+      dockerfile: ./.docker/node/Dockerfile
+    working_dir: /srv
+    volumes:
+      - ./../:/srv:delegated
+    command: [ "tail", "-f", "/dev/null" ]
+
+  nginx:
+    image: nginx:1.19.4-alpine
+    volumes:
+      - ./../www:/srv/www:delegated
+      - ./nginx/default.conf:/etc/nginx/templates/default.conf.template:delegated
+    environment:
+      - NGINX_PHP_HOST=php
+    ports:
+      - 8081:80
+
+volumes:
+  dbdata:

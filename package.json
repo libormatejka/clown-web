@@ -1,0 +1,25 @@
+{
+	"name": "clown-web",
+	"description": "Minimální ukázkový web postavený na clown/core",
+	"private": true,
+	"scripts": {
+		"build": "webpack build --mode=production --color"
+	},
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4.3.3",
+		"css-loader": "^6.7.2",
+		"file-loader": "^6.2.0",
+		"mini-css-extract-plugin": "^2.6.1",
+		"postcss-loader": "^7.0.2",
+		"tailwindcss": "^4.3.3",
+		"webpack": "^5.98.0",
+		"webpack-assets-manifest": "^5.0.6",
+		"webpack-cli": "^5.1.4"
+	},
+	"dependencies": {
+		"@contributte/datagrid": "^7.1.0",
+		"@libormatejka/clown-core-assets": "github:libormatejka/clown-core-assets#master",
+		"jquery": "^3.7.1",
+		"nette-forms": "^3.3.0"
+	}
+}

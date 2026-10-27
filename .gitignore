@@ -1,0 +1,12 @@
+/vendor/
+/node_modules/
+/temp/*
+!/temp/.gitkeep
+/log/*
+!/log/.gitkeep
+/config/local.neon
+/config/manifest-assets.json
+/www/assets/
+/.docker/data/
+/auth.json
+.phpunit.result.cache

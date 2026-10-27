@@ -1,0 +1,8 @@
+{block content}
+<article class="container">
+	<p><em>Náhled stránky (stav: {$page->getStatus()})</em></p>
+	<h1>{$page->getTitle()}</h1>
+	<div class="content-area">
+		{$page->getContent()|noescape}
+	</div>
+</article>

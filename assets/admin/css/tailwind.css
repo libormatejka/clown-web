@@ -1,0 +1,8 @@
+@import "tailwindcss" source(none);
+@import "@libormatejka/clown-core-assets/theme.css";
+@import "@libormatejka/clown-core-assets/compat.css";
+
+/* Kde Tailwind hledá třídy: šablony webu, šablony i PHP core balíčku a JS z assets balíčku */
+@source "../../../app/**/*.latte";
+@source "../../../vendor/clown/core/src/**/*.{latte,php}";
+@source "../../../node_modules/@libormatejka/clown-core-assets/**/*.js";

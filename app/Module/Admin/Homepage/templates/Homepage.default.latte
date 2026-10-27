@@ -1,0 +1,8 @@
+{block content}
+{control headerBars $headerBarsValues}
+<div class="px-4 sm:px-6 lg:px-8">
+	{control flashes $flashes}
+
+	<p class="mt-4 text-gray-900">Počet stránek: <strong>{$pagesCount}</strong></p>
+	<p class="mt-2"><a n:href="Page:default" class="text-gray-900 underline">Spravovat stránky</a></p>
+</div>

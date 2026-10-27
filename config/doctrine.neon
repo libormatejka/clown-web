@@ -1,0 +1,36 @@
+extensions:
+	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
+	doctrine.dbal: Nettrine\DBAL\DI\DbalExtension
+	doctrine.orm: Nettrine\ORM\DI\OrmExtension
+	doctrine.migrations: Nettrine\Migrations\DI\MigrationsExtension
+
+doctrine.dbal:
+	debug:
+		panel: %debugMode%
+	connections:
+		default:
+			driver: pdo_mysql
+			host: %doctrine.host%
+			user: %doctrine.user%
+			password: %doctrine.password%
+			dbname: %doctrine.dbname%
+			charset: utf8mb4
+			defaultTableOptions:
+				charset: utf8mb4
+				collate: utf8mb4_unicode_ci
+
+doctrine.orm:
+	managers:
+		default:
+			connection: default
+			autoGenerateProxyClasses: 2
+			mapping:
+				ClownCore:
+					type: attributes
+					directories:
+						- %appDir%/../vendor/clown/core/src/Entity
+					namespace: Clown\Core\Entity
+
+doctrine.migrations:
+	directories:
+		App\Migrations: %appDir%/../migrations

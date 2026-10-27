@@ -1,0 +1,59 @@
+parameters:
+	WEB:
+		name: 'Clown Web'
+		description: 'Minimální web postavený na Clown CMS (clown/core).'
+
+	uploadsSettings:
+		mediaLibraryDir: /media
+
+	version:
+		css: 0.1.0
+		js: 0.1.0
+
+extensions:
+	clownCore: Clown\Core\DI\ClownCoreExtension
+
+clownCore:
+	templateOverrideDir: %appDir%/templates/override
+	mediaLibraryDir: %uploadsSettings.mediaLibraryDir%
+	webTitle: %WEB.name%
+	pageLayouts:
+		one-column: 'Jeden sloupec'
+	wwwDir: %wwwDir%
+	cssVersion: %version.css%
+	jsVersion: %version.js%
+
+application:
+	errorPresenter: Front:Error
+	mapping:
+		*: [App\Module, *, *\*Presenter]
+
+session:
+	expiration: 14 days
+
+di:
+	export:
+		parameters: no
+		tags: no
+
+services:
+	cache.storage: Nette\Caching\Storages\FileStorage(%tempDir%/cache)
+	- App\Router\RouterFactory::createRouter
+	- App\Model\Auth\PasswordAuthenticator
+	- App\Model\Service\AssetManifestResolver
+	- App\Model\Service\MenuProvider
+	- App\Model\Command\SeedCommand
+
+	# PagePresenter (clown/core) má v konstruktoru syrový string parametr, který autowiring nezná.
+	- App\Module\Admin\Page\PagePresenter(mediaLibraryDir: %uploadsSettings.mediaLibraryDir%)
+
+	-
+		factory: App\Model\Service\AdminMenuProvider
+		tags: [clown.adminMenuItem]
+
+	-
+		factory: Clown\Core\AddonRegistry\GenericAdminEntityLinkProvider(Clown\Core\Entity\Page, ':Admin:Page:update')
+		tags: [clown.adminEntityLink]
+
+includes:
+	- doctrine.neon
