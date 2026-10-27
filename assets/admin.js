@@ -10,9 +10,6 @@ import '@contributte/datagrid/dist/datagrid-full.js';
 
 import './admin/css/tailwind.css';
 
-// Zástupné logo — core Sidebar natvrdo žádá asset img/collectorbatboy-logo.png (viz docs/CMS_CORE_MIGRATION_PLAN.md)
-import './admin/img/collectorbatboy-logo.png';
-
 import AlertCloseButton from '@libormatejka/clown-core-assets/admin/js/AlertCloseButton';
 import DataGridColChooser from '@libormatejka/clown-core-assets/admin/js/DataGridColChooser';
 import GenerateSlug from '@libormatejka/clown-core-assets/admin/js/GenerateSlug';
