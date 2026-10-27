@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-core.git",
-                "reference": "88e5d59df079c821dcb05aec3c16e62371f0e429"
+                "reference": "ad2c0cd59f011214ca788c491ad0e60f8a142ac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/88e5d59df079c821dcb05aec3c16e62371f0e429",
-                "reference": "88e5d59df079c821dcb05aec3c16e62371f0e429",
+                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/ad2c0cd59f011214ca788c491ad0e60f8a142ac3",
+                "reference": "ad2c0cd59f011214ca788c491ad0e60f8a142ac3",
                 "shasum": ""
             },
             "require": {
@@ -86,6 +86,7 @@
                 "nette/security": "^3.2",
                 "php": ">=8.2",
                 "spomky-labs/otphp": "^11.0",
+                "tracy/tracy": "^2.9",
                 "ublaboo/datagrid": "^7.0"
             },
             "require-dev": {
@@ -115,7 +116,7 @@
                 "source": "https://github.com/libormatejka/clown-core/tree/main",
                 "issues": "https://github.com/libormatejka/clown-core/issues"
             },
-            "time": "2026-10-27T13:57:27+00:00"
+            "time": "2026-10-27T14:36:31+00:00"
         },
         {
             "name": "contributte/console",

@@ -22,6 +22,7 @@ clownCore:
 	wwwDir: %wwwDir%
 	cssVersion: %version.css%
 	jsVersion: %version.js%
+	passwordAuthenticator: true
 
 application:
 	errorPresenter: Front:Error
@@ -39,21 +40,8 @@ di:
 services:
 	cache.storage: Nette\Caching\Storages\FileStorage(%tempDir%/cache)
 	- App\Router\RouterFactory::createRouter
-	- App\Model\Auth\PasswordAuthenticator
 	- App\Model\Service\AssetManifestResolver
-	- App\Model\Service\MenuProvider
 	- App\Model\Command\SeedCommand
-
-	# PagePresenter (clown/core) má v konstruktoru syrový string parametr, který autowiring nezná.
-	- App\Module\Admin\Page\PagePresenter(mediaLibraryDir: %uploadsSettings.mediaLibraryDir%)
-
-	-
-		factory: App\Model\Service\AdminMenuProvider
-		tags: [clown.adminMenuItem]
-
-	-
-		factory: Clown\Core\AddonRegistry\GenericAdminEntityLinkProvider(Clown\Core\Entity\Page, ':Admin:Page:update')
-		tags: [clown.adminEntityLink]
 
 includes:
 	- doctrine.neon

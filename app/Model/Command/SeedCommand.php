@@ -2,7 +2,6 @@
 
 namespace App\Model\Command;
 
-use App\Model\Service\MenuProvider;
 use Clown\Core\Entity\Menu;
 use Clown\Core\Entity\MenuItem;
 use Clown\Core\Entity\Page;
@@ -19,6 +18,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 #[AsCommand(name: 'app:seed', description: 'Vytvoří admin uživatele, stránky O nás / O projektu a hlavní menu.')]
 final class SeedCommand extends Command
 {
+
+	// Shoduje se s výchozí hodnotou clownCore.mainMenuTitle
+	private const MAIN_MENU_TITLE = 'Hlavní menu';
 
 	public function __construct(
 		private EntityManagerInterface $entityManager,
@@ -76,10 +78,10 @@ final class SeedCommand extends Command
 			'<p>Clown CMS se skládá z jádra (<strong>clown-core</strong>) a volitelných addonů. Web si jádro nainstaluje přes Composer a aktualizuje stejným způsobem.</p><p>Tato ukázka používá jen jádro: stránky, menu, uživatele a administraci.</p>',
 		);
 
-		$menu = $this->entityManager->getRepository(Menu::class)->findOneBy(['title' => MenuProvider::MAIN_MENU_TITLE]);
+		$menu = $this->entityManager->getRepository(Menu::class)->findOneBy(['title' => self::MAIN_MENU_TITLE]);
 		if (!$menu instanceof Menu) {
 			$menu = new Menu();
-			$menu->setTitle(MenuProvider::MAIN_MENU_TITLE);
+			$menu->setTitle(self::MAIN_MENU_TITLE);
 			$this->entityManager->persist($menu);
 
 			$this->createMenuItem($menu, 'O nás', '/o-nas/', 1);

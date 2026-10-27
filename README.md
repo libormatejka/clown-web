@@ -48,6 +48,14 @@ Nette při chybě v šabloně často vrací HTTP 200 s Tracy obrazovkou.
 
 ## Co patří do webu a co do jádra
 
-Do tohoto repozitáře patří jen „lepidlo“: router, autentikátor, forwarding stub presentery, layouty, seed.
-Všechno, co bylo potřeba doplnit navíc proti `clown/core`, je zapsané v `docs/CMS_CORE_MIGRATION_PLAN.md`
-v repozitáři `collectorboy` (sekce Fáze 7 Krok B).
+Presentery (admin Login/Logout/Page/Dashboard/Profil, front Page/Náhled/Chyby), jejich šablony, layouty,
+autentikátor a menu dodává `clown/core`. Web obsahuje jen:
+
+- konfiguraci (`config/`), včetně `clownCore.passwordAuthenticator: true`,
+- router (`app/Router`) složený z `CoreRoutes::admin()` a `CoreRoutes::front()`,
+- `AssetManifestResolver` (čte manifest webpacku),
+- seed příkaz a webpack/Tailwind sestavení assetů.
+
+Vzhled lze přepsat šablonami v `app/templates/override/` (např. `Admin/@layout.latte`, `Front/@layout.latte`,
+`Admin/Page/update.latte`) nebo vlastním presenterem se stejným názvem (např. `App\Module\Front\Homepage\HomepagePresenter`).
+Zápis nalezených problémů je v `docs/CMS_CORE_MIGRATION_PLAN.md` v repozitáři `collectorboy`.
