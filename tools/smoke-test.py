@@ -100,5 +100,6 @@ check('/admin/post/', 200, 'Seznam příspěvků', expect_layout=True)
 check('/admin/post/create', 200, 'Napsat příspěvek', expect_layout=True)
 check('/admin/review/', 200, 'Seznam recenzí', expect_layout=True)
 check('/admin/review/create', 200, 'Napsat recenzi', expect_layout=True)
+check('/admin/api-log/', 200, 'Seznam api logů', expect_layout=True)
 
 sys.exit(1 if failures else 0)

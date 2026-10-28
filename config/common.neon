@@ -10,6 +10,9 @@ parameters:
 		css: 0.1.0
 		js: 0.1.0
 
+	api:
+		pepper: clown-web-dev-pepper-change-me
+
 extensions:
 	clownCore: Clown\Core\DI\ClownCoreExtension
 	clownRedirect: Clown\Redirect\DI\ClownRedirectExtension
@@ -26,6 +29,7 @@ extensions:
 	clownBlog: Clown\Blog\DI\ClownBlogExtension
 	clownPost: Clown\Post\DI\ClownPostExtension
 	clownReviews: Clown\Reviews\DI\ClownReviewsExtension
+	clownApi: Clown\Api\DI\ClownApiExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override
@@ -37,6 +41,10 @@ clownCore:
 	cssVersion: %version.css%
 	jsVersion: %version.js%
 	passwordAuthenticator: true
+
+clownApi:
+	pepper: %api.pepper%
+	debugMode: %debugMode%
 
 clownFrontExtras:
 	gtmId: null

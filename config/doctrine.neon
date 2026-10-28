@@ -85,6 +85,11 @@ doctrine.orm:
 					directories:
 						- %appDir%/../vendor/clown/reviews/src/Entity
 					namespace: Clown\Reviews\Entity
+				ClownApi:
+					type: attributes
+					directories:
+						- %appDir%/../vendor/clown/api/src/Entity
+					namespace: Clown\Api\Entity
 
 doctrine.migrations:
 	directories:
