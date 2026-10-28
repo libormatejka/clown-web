@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1338ae4d356ec51e37e8309d14c3360d",
+    "content-hash": "af1d673f16f4360dceea68ce70fbb622",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -170,6 +170,57 @@
                 "issues": "https://github.com/libormatejka/clown-core/issues"
             },
             "time": "2026-10-28T11:48:37+00:00"
+        },
+        {
+            "name": "clown/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-log.git",
+                "reference": "44fd0ee72d30bb29d2edbd3e2f3dbb31dbcc38b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-log/zipball/44fd0ee72d30bb29d2edbd3e2f3dbb31dbcc38b2",
+                "reference": "44fd0ee72d30bb29d2edbd3e2f3dbb31dbcc38b2",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "doctrine/dbal": "^4.0",
+                "doctrine/orm": "^3.0",
+                "nette/di": "^3.2",
+                "nette/http": "^3.2",
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Log\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Log\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – generický auditní log (Log, LogType, EntityLogSubscriber, ManualLogService)",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-log/tree/master",
+                "issues": "https://github.com/libormatejka/clown-log/issues"
+            },
+            "time": "2026-10-24T20:22:05+00:00"
         },
         {
             "name": "clown/redirect",
@@ -4667,6 +4718,7 @@
     "stability-flags": {
         "clown/blocks": 20,
         "clown/core": 20,
+        "clown/log": 20,
         "clown/redirect": 20,
         "clown/taxonomy": 20
     },

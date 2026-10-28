@@ -45,6 +45,11 @@ doctrine.orm:
 					directories:
 						- %appDir%/../vendor/clown/taxonomy/src/Entity
 					namespace: Clown\Taxonomy\Entity
+				ClownLog:
+					type: attributes
+					directories:
+						- %appDir%/../vendor/clown/log/src/Entity
+					namespace: Clown\Log\Entity
 
 doctrine.migrations:
 	directories:
