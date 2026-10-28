@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa58d2678b56a37cdd7c2b6d63f81abe",
+    "content-hash": "9eeb9bd6b5ed6314f0df764c834ceb3c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -218,6 +218,57 @@
                 "issues": "https://github.com/libormatejka/clown-core/issues"
             },
             "time": "2026-10-28T11:48:37+00:00"
+        },
+        {
+            "name": "clown/front-extras",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-front-extras.git",
+                "reference": "6ff77ed70f56d5915f1dcdfe9e6dd3f1898014e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-front-extras/zipball/6ff77ed70f56d5915f1dcdfe9e6dd3f1898014e7",
+                "reference": "6ff77ed70f56d5915f1dcdfe9e6dd3f1898014e7",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/forms": "^3.2",
+                "nette/http": "^3.3",
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\FrontExtras\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\FrontExtras\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – nezávislé front rozšíření (GTM, StructuredData, Shortcode engine, SearchBox)",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-front-extras/tree/master",
+                "issues": "https://github.com/libormatejka/clown-front-extras/issues"
+            },
+            "time": "2026-10-22T18:20:07+00:00"
         },
         {
             "name": "clown/log",
@@ -4817,6 +4868,7 @@
         "clown/blocks": 20,
         "clown/cache": 20,
         "clown/core": 20,
+        "clown/front-extras": 20,
         "clown/log": 20,
         "clown/redirect": 20,
         "clown/revisions": 20,

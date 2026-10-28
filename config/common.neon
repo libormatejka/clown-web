@@ -18,6 +18,7 @@ extensions:
 	clownLog: Clown\Log\DI\ClownLogExtension
 	clownCache: Clown\Cache\DI\ClownCacheExtension
 	clownRevisions: Clown\Revisions\DI\ClownRevisionsExtension
+	clownFrontExtras: Clown\FrontExtras\DI\ClownFrontExtrasExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override
@@ -29,6 +30,43 @@ clownCore:
 	cssVersion: %version.css%
 	jsVersion: %version.js%
 	passwordAuthenticator: true
+
+clownFrontExtras:
+	gtmId: null
+	structuredData:
+		domain: https://clown-web.local
+		defaultImage: /assets/img/placeholder.png
+		uploadsDir: %uploadsSettings.mediaLibraryDir%
+		license: https://clown-web.local/podminky/
+		socialLinks: []
+		websiteName: %WEB.name%
+		websiteDescription: %WEB.description%
+		organization:
+			name: %WEB.name%
+			description: 'Ukázkový web Clown CMS.'
+			foundingDate: '2026'
+			founderName: 'Clown Web'
+			logoWidth: 512
+			logoHeight: 512
+			logoCaption: 'Clown Web logo'
+			email: info@clown-web.local
+			areaServed: CZ
+			knowsAbout: []
+		author:
+			name: 'Clown Web'
+			url: https://clown-web.local/
+			email: info@clown-web.local
+			jobTitle: Administrator
+			street: ''
+			locality: ''
+			postalCode: ''
+			region: CZ
+			country: CZ
+		publisher:
+			name: %WEB.name%
+			url: https://clown-web.local/
+			description: %WEB.description%
+			foundingDate: '2026'
 
 application:
 	errorPresenter: Front:Error
