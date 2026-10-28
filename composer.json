@@ -21,6 +21,7 @@
 		"clown/post": "dev-master",
 		"clown/reviews": "dev-master",
 		"clown/api": "dev-master",
+		"clown/webmcp": "dev-master",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -132,6 +133,11 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-api.git",
 			"name": "clown/api"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/libormatejka/clown-webmcp.git",
+			"name": "clown/webmcp"
 		}
 	]
 }

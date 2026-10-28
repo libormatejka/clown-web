@@ -30,6 +30,7 @@ extensions:
 	clownPost: Clown\Post\DI\ClownPostExtension
 	clownReviews: Clown\Reviews\DI\ClownReviewsExtension
 	clownApi: Clown\Api\DI\ClownApiExtension
+	clownWebMcp: Clown\WebMcp\DI\ClownWebMcpExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f76a1a163a22a933dc5ae47f702869ea",
+    "content-hash": "33770e06a3fed15729fc12818d023a92",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -919,6 +919,57 @@
                 "issues": "https://github.com/libormatejka/clown-taxonomy/issues"
             },
             "time": "2026-10-22T20:38:34+00:00"
+        },
+        {
+            "name": "clown/webmcp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-webmcp.git",
+                "reference": "7205ee4b7ce31d56d80d111dee973fc4eaee3c83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-webmcp/zipball/7205ee4b7ce31d56d80d111dee973fc4eaee3c83",
+                "reference": "7205ee4b7ce31d56d80d111dee973fc4eaee3c83",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/http": "^3.3",
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\WebMcp\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\WebMcp\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – core WebMcp infrastruktura (MCP přes HTTP pro AI nástroje, logování volání)",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-webmcp/tree/master",
+                "issues": "https://github.com/libormatejka/clown-webmcp/issues"
+            },
+            "time": "2026-10-24T12:01:16+00:00"
         },
         {
             "name": "contributte/console",
@@ -5323,7 +5374,8 @@
         "clown/redirect": 20,
         "clown/reviews": 20,
         "clown/revisions": 20,
-        "clown/taxonomy": 20
+        "clown/taxonomy": 20,
+        "clown/webmcp": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

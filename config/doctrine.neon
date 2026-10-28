@@ -90,6 +90,11 @@ doctrine.orm:
 					directories:
 						- %appDir%/../vendor/clown/api/src/Entity
 					namespace: Clown\Api\Entity
+				ClownWebMcp:
+					type: attributes
+					directories:
+						- %appDir%/../vendor/clown/webmcp/src/Entity
+					namespace: Clown\WebMcp\Entity
 
 doctrine.migrations:
 	directories:
