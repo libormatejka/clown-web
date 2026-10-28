@@ -31,6 +31,7 @@ extensions:
 	clownReviews: Clown\Reviews\DI\ClownReviewsExtension
 	clownApi: Clown\Api\DI\ClownApiExtension
 	clownWebMcp: Clown\WebMcp\DI\ClownWebMcpExtension
+	clownGoogleAuth: Clown\GoogleAuth\DI\ClownGoogleAuthExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override
@@ -46,6 +47,11 @@ clownCore:
 clownApi:
 	pepper: %api.pepper%
 	debugMode: %debugMode%
+
+clownGoogleAuth:
+	clientId: dev-placeholder-client-id
+	clientSecret: dev-placeholder-client-secret
+	redirectUri: http://localhost:8081/admin/login/google-callback
 
 clownFrontExtras:
 	gtmId: null
