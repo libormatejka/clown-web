@@ -19,6 +19,7 @@
 		"clown/podcast": "dev-master",
 		"clown/blog": "dev-master",
 		"clown/post": "dev-master",
+		"clown/reviews": "dev-master",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -120,6 +121,11 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-post.git",
 			"name": "clown/post"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/libormatejka/clown-reviews.git",
+			"name": "clown/reviews"
 		}
 	]
 }

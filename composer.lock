@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e92816a4485e1c9bd6e7e0b53716632",
+    "content-hash": "fc4d0ec44fb4c4564005450dc581979c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -707,6 +707,63 @@
                 "issues": "https://github.com/libormatejka/clown-redirect/issues"
             },
             "time": "2026-10-15T17:52:49+00:00"
+        },
+        {
+            "name": "clown/reviews",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-reviews.git",
+                "reference": "95adaaa7dd60deada4d34ac7d538447c22d99cef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-reviews/zipball/95adaaa7dd60deada4d34ac7d538447c22d99cef",
+                "reference": "95adaaa7dd60deada4d34ac7d538447c22d99cef",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "clown/gallery": "*@dev",
+                "clown/revisions": "*@dev",
+                "clown/taxonomy": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/forms": "^3.2",
+                "nette/security": "^3.2",
+                "nette/utils": "^4.0",
+                "php": ">=8.2",
+                "ublaboo/datagrid": "^7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Reviews\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Reviews\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – recenze (Review, ReviewTag, ReviewRevision) s generickým admin CRUD a revizemi",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-reviews/tree/master",
+                "issues": "https://github.com/libormatejka/clown-reviews/issues"
+            },
+            "time": "2026-10-28T11:44:12+00:00"
         },
         {
             "name": "clown/revisions",
@@ -5210,6 +5267,7 @@
         "clown/portfolio": 20,
         "clown/post": 20,
         "clown/redirect": 20,
+        "clown/reviews": 20,
         "clown/revisions": 20,
         "clown/taxonomy": 20
     },

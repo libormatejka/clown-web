@@ -25,6 +25,7 @@ extensions:
 	clownPodcast: Clown\Podcast\DI\ClownPodcastExtension
 	clownBlog: Clown\Blog\DI\ClownBlogExtension
 	clownPost: Clown\Post\DI\ClownPostExtension
+	clownReviews: Clown\Reviews\DI\ClownReviewsExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override
