@@ -5,6 +5,11 @@ parameters:
 
 	uploadsSettings:
 		mediaLibraryDir: /media
+		mediaLibraryPath: %wwwDir%/media
+
+	ai:
+		apiKey: dev-placeholder-gemini-api-key
+		imageApiKey: dev-placeholder-gemini-image-api-key
 
 	version:
 		css: 0.1.0
@@ -32,6 +37,7 @@ extensions:
 	clownApi: Clown\Api\DI\ClownApiExtension
 	clownWebMcp: Clown\WebMcp\DI\ClownWebMcpExtension
 	clownGoogleAuth: Clown\GoogleAuth\DI\ClownGoogleAuthExtension
+	clownAi: Clown\Ai\DI\ClownAiExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override
@@ -52,6 +58,10 @@ clownGoogleAuth:
 	clientId: dev-placeholder-client-id
 	clientSecret: dev-placeholder-client-secret
 	redirectUri: http://localhost:8081/admin/login/google-callback
+
+clownAi:
+	apiKey: %ai.apiKey%
+	imageApiKey: %ai.imageApiKey%
 
 clownFrontExtras:
 	gtmId: null
@@ -109,6 +119,14 @@ services:
 	- App\Router\RouterFactory::createRouter
 	- App\Model\Service\AssetManifestResolver
 	- App\Model\Command\SeedCommand
+
+	# AiPresenter (Clown\Ai) má mediaLibraryDir typovaný přes
+	# Clown\Core\Settings\MediaLibraryDir (autowireable), ale
+	# mediaLibraryPath zůstává syrový string parametr (core pro něj
+	# žádný typový obal nemá) — web ho musí zaregistrovat jako
+	# explicitní službu jen s tímto jedním argumentem (viz
+	# docs/CMS_CORE_MIGRATION_PLAN.md, B9).
+	- App\Module\Admin\Ai\AiPresenter(mediaLibraryPath: %uploadsSettings.mediaLibraryPath%)
 
 includes:
 	- doctrine.neon

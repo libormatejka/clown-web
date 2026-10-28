@@ -23,6 +23,7 @@
 		"clown/api": "dev-master",
 		"clown/webmcp": "dev-master",
 		"clown/google-auth": "dev-master",
+		"clown/ai": "dev-master",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -144,6 +145,11 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-google-auth.git",
 			"name": "clown/google-auth"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/libormatejka/clown-ai.git",
+			"name": "clown/ai"
 		}
 	]
 }
