@@ -17,6 +17,7 @@ extensions:
 	clownTaxonomy: Clown\Taxonomy\DI\ClownTaxonomyExtension
 	clownLog: Clown\Log\DI\ClownLogExtension
 	clownCache: Clown\Cache\DI\ClownCacheExtension
+	clownRevisions: Clown\Revisions\DI\ClownRevisionsExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override

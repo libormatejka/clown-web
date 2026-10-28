@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "758df9c8b148efccd98e740b94f6e2c0",
+    "content-hash": "fa58d2678b56a37cdd7c2b6d63f81abe",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -323,6 +323,56 @@
                 "issues": "https://github.com/libormatejka/clown-redirect/issues"
             },
             "time": "2026-10-15T17:52:49+00:00"
+        },
+        {
+            "name": "clown/revisions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-revisions.git",
+                "reference": "eede2da77647e1aab3c5259894342ff411c93840"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-revisions/zipball/eede2da77647e1aab3c5259894342ff411c93840",
+                "reference": "eede2da77647e1aab3c5259894342ff411c93840",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Revisions\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Revisions\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – generický revizní mechanismus (AbstractRevisionSubscriber, RevisionDiffService, admin komponenta Revisions)",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-revisions/tree/master",
+                "issues": "https://github.com/libormatejka/clown-revisions/issues"
+            },
+            "time": "2026-10-22T17:41:51+00:00"
         },
         {
             "name": "clown/taxonomy",
@@ -4769,6 +4819,7 @@
         "clown/core": 20,
         "clown/log": 20,
         "clown/redirect": 20,
+        "clown/revisions": 20,
         "clown/taxonomy": 20
     },
     "prefer-stable": false,
