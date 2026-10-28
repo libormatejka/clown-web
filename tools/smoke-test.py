@@ -90,5 +90,7 @@ check('/admin/gallery/', 200, 'Všechny galerie', expect_layout=True)
 check('/admin/gallery/create', 200, 'Vytvořit galerii', expect_layout=True)
 check('/admin/article/', 200, 'Seznam článků', expect_layout=True)
 check('/admin/article/create', 200, 'Napsat článek', expect_layout=True)
+check('/admin/portfolio/', 200, 'Výpis portfolií', expect_layout=True)
+check('/admin/portfolio/create', 200, 'Vytvořit portfolio', expect_layout=True)
 
 sys.exit(1 if failures else 0)
