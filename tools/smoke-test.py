@@ -94,5 +94,7 @@ check('/admin/portfolio/', 200, 'Výpis portfolií', expect_layout=True)
 check('/admin/portfolio/create', 200, 'Vytvořit portfolio', expect_layout=True)
 check('/admin/podcast/', 200, 'Seznam epizod podcastu', expect_layout=True)
 check('/admin/podcast/create', 200, 'Přidat epizodu podcastu', expect_layout=True)
+check('/admin/blog/', 200, 'Seznam příspěvků na blogu', expect_layout=True)
+check('/admin/blog/create', 200, 'Přidat příspěvek na blog', expect_layout=True)
 
 sys.exit(1 if failures else 0)

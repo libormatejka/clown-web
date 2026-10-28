@@ -23,6 +23,7 @@ extensions:
 	clownArticles: Clown\Articles\DI\ClownArticlesExtension
 	clownPortfolio: Clown\Portfolio\DI\ClownPortfolioExtension
 	clownPodcast: Clown\Podcast\DI\ClownPodcastExtension
+	clownBlog: Clown\Blog\DI\ClownBlogExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override
