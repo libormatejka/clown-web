@@ -10,6 +10,7 @@
 		"clown/blocks": "dev-main",
 		"clown/taxonomy": "dev-master",
 		"clown/log": "dev-master",
+		"clown/cache": "dev-main",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -66,6 +67,11 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-log.git",
 			"name": "clown/log"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/libormatejka/clown-cache.git",
+			"name": "clown/cache"
 		}
 	]
 }

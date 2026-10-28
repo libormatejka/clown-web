@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af1d673f16f4360dceea68ce70fbb622",
+    "content-hash": "758df9c8b148efccd98e740b94f6e2c0",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -112,6 +112,54 @@
                 "issues": "https://github.com/libormatejka/clown-blocks/issues"
             },
             "time": "2026-10-22T08:56:32+00:00"
+        },
+        {
+            "name": "clown/cache",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-cache.git",
+                "reference": "1ffe47f120df1bb120a1816657bdc9770a45921a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-cache/zipball/1ffe47f120df1bb120a1816657bdc9770a45921a",
+                "reference": "1ffe47f120df1bb120a1816657bdc9770a45921a",
+                "shasum": ""
+            },
+            "require": {
+                "nette/caching": "^3.4",
+                "nette/di": "^3.2",
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Cache\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Cache\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – generická front cache infrastruktura (FrontCacheService, CacheKeys)",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-cache/tree/main",
+                "issues": "https://github.com/libormatejka/clown-cache/issues"
+            },
+            "time": "2026-10-22T10:17:43+00:00"
         },
         {
             "name": "clown/core",
@@ -4717,6 +4765,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "clown/blocks": 20,
+        "clown/cache": 20,
         "clown/core": 20,
         "clown/log": 20,
         "clown/redirect": 20,
