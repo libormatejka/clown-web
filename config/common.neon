@@ -14,6 +14,7 @@ extensions:
 	clownCore: Clown\Core\DI\ClownCoreExtension
 	clownRedirect: Clown\Redirect\DI\ClownRedirectExtension
 	clownBlocks: Clown\Blocks\DI\ClownBlocksExtension
+	clownTaxonomy: Clown\Taxonomy\DI\ClownTaxonomyExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override

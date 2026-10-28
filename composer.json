@@ -8,6 +8,7 @@
 		"clown/core": "dev-main",
 		"clown/redirect": "dev-main",
 		"clown/blocks": "dev-main",
+		"clown/taxonomy": "dev-master",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -54,6 +55,11 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-blocks.git",
 			"name": "clown/blocks"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/libormatejka/clown-taxonomy.git",
+			"name": "clown/taxonomy"
 		}
 	]
 }

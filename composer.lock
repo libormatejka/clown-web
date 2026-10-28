@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d32ded6db1152b37d5929ad1b2ece051",
+    "content-hash": "1338ae4d356ec51e37e8309d14c3360d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -224,6 +224,58 @@
                 "issues": "https://github.com/libormatejka/clown-redirect/issues"
             },
             "time": "2026-10-15T17:52:49+00:00"
+        },
+        {
+            "name": "clown/taxonomy",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-taxonomy.git",
+                "reference": "f1fb75617941438d28f2de9574076503e1bd6a8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-taxonomy/zipball/f1fb75617941438d28f2de9574076503e1bd6a8b",
+                "reference": "f1fb75617941438d28f2de9574076503e1bd6a8b",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/forms": "^3.2",
+                "php": ">=8.2",
+                "ublaboo/datagrid": "^7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Taxonomy\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Taxonomy\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – taxonomie (Tag, Category) s generickým admin CRUD",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-taxonomy/tree/master",
+                "issues": "https://github.com/libormatejka/clown-taxonomy/issues"
+            },
+            "time": "2026-10-22T20:38:34+00:00"
         },
         {
             "name": "contributte/console",
@@ -4615,7 +4667,8 @@
     "stability-flags": {
         "clown/blocks": 20,
         "clown/core": 20,
-        "clown/redirect": 20
+        "clown/redirect": 20,
+        "clown/taxonomy": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -40,6 +40,11 @@ doctrine.orm:
 					directories:
 						- %appDir%/../vendor/clown/blocks/src/Entity
 					namespace: Clown\Blocks\Entity
+				ClownTaxonomy:
+					type: attributes
+					directories:
+						- %appDir%/../vendor/clown/taxonomy/src/Entity
+					namespace: Clown\Taxonomy\Entity
 
 doctrine.migrations:
 	directories:
