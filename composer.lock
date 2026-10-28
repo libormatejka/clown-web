@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6228bceacb55320b09d478b12fc7ea42",
+    "content-hash": "8e92816a4485e1c9bd6e7e0b53716632",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -596,6 +596,63 @@
                 "issues": "https://github.com/libormatejka/clown-portfolio/issues"
             },
             "time": "2026-10-28T11:43:55+00:00"
+        },
+        {
+            "name": "clown/post",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-post.git",
+                "reference": "5c3b39f7765c1a7d7693915292e20fdc7e234381"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-post/zipball/5c3b39f7765c1a7d7693915292e20fdc7e234381",
+                "reference": "5c3b39f7765c1a7d7693915292e20fdc7e234381",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "clown/gallery": "*@dev",
+                "clown/revisions": "*@dev",
+                "clown/taxonomy": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/forms": "^3.2",
+                "nette/security": "^3.2",
+                "nette/utils": "^4.0",
+                "php": ">=8.2",
+                "ublaboo/datagrid": "^7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Post\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Post\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – post (Post, PostTag, PostRevision) s generickým admin CRUD a revizemi",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-post/tree/master",
+                "issues": "https://github.com/libormatejka/clown-post/issues"
+            },
+            "time": "2026-10-28T11:44:07+00:00"
         },
         {
             "name": "clown/redirect",
@@ -5151,6 +5208,7 @@
         "clown/log": 20,
         "clown/podcast": 20,
         "clown/portfolio": 20,
+        "clown/post": 20,
         "clown/redirect": 20,
         "clown/revisions": 20,
         "clown/taxonomy": 20

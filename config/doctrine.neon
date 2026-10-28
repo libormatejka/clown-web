@@ -75,6 +75,11 @@ doctrine.orm:
 					directories:
 						- %appDir%/../vendor/clown/blog/src/Entity
 					namespace: Clown\Blog\Entity
+				ClownPost:
+					type: attributes
+					directories:
+						- %appDir%/../vendor/clown/post/src/Entity
+					namespace: Clown\Post\Entity
 
 doctrine.migrations:
 	directories:

@@ -96,5 +96,7 @@ check('/admin/podcast/', 200, 'Seznam epizod podcastu', expect_layout=True)
 check('/admin/podcast/create', 200, 'Přidat epizodu podcastu', expect_layout=True)
 check('/admin/blog/', 200, 'Seznam příspěvků na blogu', expect_layout=True)
 check('/admin/blog/create', 200, 'Přidat příspěvek na blog', expect_layout=True)
+check('/admin/post/', 200, 'Seznam příspěvků', expect_layout=True)
+check('/admin/post/create', 200, 'Napsat příspěvek', expect_layout=True)
 
 sys.exit(1 if failures else 0)

@@ -18,6 +18,7 @@
 		"clown/portfolio": "dev-master",
 		"clown/podcast": "dev-master",
 		"clown/blog": "dev-master",
+		"clown/post": "dev-master",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -114,6 +115,11 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-blog.git",
 			"name": "clown/blog"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/libormatejka/clown-post.git",
+			"name": "clown/post"
 		}
 	]
 }
