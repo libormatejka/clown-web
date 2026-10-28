@@ -65,6 +65,11 @@ doctrine.orm:
 					directories:
 						- %appDir%/../vendor/clown/portfolio/src/Entity
 					namespace: Clown\Portfolio\Entity
+				ClownPodcast:
+					type: attributes
+					directories:
+						- %appDir%/../vendor/clown/podcast/src/Entity
+					namespace: Clown\Podcast\Entity
 
 doctrine.migrations:
 	directories:

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e4047d4c1594190934066f5ffc29b6e",
+    "content-hash": "edf581dfdf9020636a2365959a9bcccd",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -429,6 +429,62 @@
                 "issues": "https://github.com/libormatejka/clown-log/issues"
             },
             "time": "2026-10-24T20:22:05+00:00"
+        },
+        {
+            "name": "clown/podcast",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-podcast.git",
+                "reference": "bee8b45112729fce75d697a46aeffb637e328484"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-podcast/zipball/bee8b45112729fce75d697a46aeffb637e328484",
+                "reference": "bee8b45112729fce75d697a46aeffb637e328484",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "clown/gallery": "*@dev",
+                "clown/taxonomy": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/forms": "^3.2",
+                "nette/security": "^3.2",
+                "nette/utils": "^4.0",
+                "php": ">=8.2",
+                "ublaboo/datagrid": "^7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Podcast\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Podcast\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – podcast (Podcast, PodcastTag) s generickým admin CRUD",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-podcast/tree/master",
+                "issues": "https://github.com/libormatejka/clown-podcast/issues"
+            },
+            "time": "2026-10-28T11:43:59+00:00"
         },
         {
             "name": "clown/portfolio",
@@ -5036,6 +5092,7 @@
         "clown/front-extras": 20,
         "clown/gallery": 20,
         "clown/log": 20,
+        "clown/podcast": 20,
         "clown/portfolio": 20,
         "clown/redirect": 20,
         "clown/revisions": 20,
