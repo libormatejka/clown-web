@@ -13,6 +13,7 @@ parameters:
 extensions:
 	clownCore: Clown\Core\DI\ClownCoreExtension
 	clownRedirect: Clown\Redirect\DI\ClownRedirectExtension
+	clownBlocks: Clown\Blocks\DI\ClownBlocksExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override

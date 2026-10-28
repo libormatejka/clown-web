@@ -35,6 +35,11 @@ doctrine.orm:
 					directories:
 						- %appDir%/../vendor/clown/redirect/src/Entity
 					namespace: Clown\Redirect\Entity
+				ClownBlocks:
+					type: attributes
+					directories:
+						- %appDir%/../vendor/clown/blocks/src/Entity
+					namespace: Clown\Blocks\Entity
 
 doctrine.migrations:
 	directories:

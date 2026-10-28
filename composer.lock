@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c7230ea9059a836e688d975d66e72dd",
+    "content-hash": "d32ded6db1152b37d5929ad1b2ece051",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -60,6 +60,58 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/v3.1.1"
             },
             "time": "2026-04-05T21:06:35+00:00"
+        },
+        {
+            "name": "clown/blocks",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-blocks.git",
+                "reference": "efc3336e1a72f9cc51b24b08188ffc8be7fa8ad2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-blocks/zipball/efc3336e1a72f9cc51b24b08188ffc8be7fa8ad2",
+                "reference": "efc3336e1a72f9cc51b24b08188ffc8be7fa8ad2",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/forms": "^3.2",
+                "php": ">=8.2",
+                "ublaboo/datagrid": "^7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Blocks\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Blocks\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – addon pro vlastní HTML/JS bloky vkládané přes URL/shortcode",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-blocks/tree/main",
+                "issues": "https://github.com/libormatejka/clown-blocks/issues"
+            },
+            "time": "2026-10-22T08:56:32+00:00"
         },
         {
             "name": "clown/core",
@@ -4561,6 +4613,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "clown/blocks": 20,
         "clown/core": 20,
         "clown/redirect": 20
     },

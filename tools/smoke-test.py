@@ -75,5 +75,7 @@ check('/admin/profile/', 200, email)
 check('/preview/stranka/o-nas/', 200, 'Náhled stránky')
 check('/admin/redirect/', 200, 'Přesměrování')
 check('/admin/redirect/create', 200, 'Přidat přesměrování')
+check('/admin/block/', 200, 'Seznam blocků')
+check('/admin/block/create', 200, 'Přidat block')
 
 sys.exit(1 if failures else 0)
