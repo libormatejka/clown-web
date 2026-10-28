@@ -13,6 +13,7 @@ import './admin/css/tailwind.css';
 import AlertCloseButton from '@libormatejka/clown-core-assets/admin/js/AlertCloseButton';
 import DataGridColChooser from '@libormatejka/clown-core-assets/admin/js/DataGridColChooser';
 import GenerateSlug from '@libormatejka/clown-core-assets/admin/js/GenerateSlug';
+import MediaModal from '@libormatejka/clown-core-assets/admin/js/MediaModal';
 import SidebarMenuButton from '@libormatejka/clown-core-assets/admin/js/SidebarMenuButton';
 import StatusButtonLabelUpdater from '@libormatejka/clown-core-assets/admin/js/StatusButtonLabelUpdater';
 import TableList from '@libormatejka/clown-core-assets/admin/js/TableList';
@@ -29,4 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	const tableListInstance = new TableList();
 	window.tableListInstance = tableListInstance;
 	tableListInstance.initMainCheckbox();
+});
+
+// Tinymce Init
+import * as TinymceEditor from '@libormatejka/clown-core-assets/admin/js/TinymceEditor';
+TinymceEditor.render();
+
+// Initializing MediaModal if the element with id "mediaModalActive" exists in the DOM
+document.addEventListener('DOMContentLoaded', () => {
+	if (document.getElementById('mediaModalActive')) {
+		new MediaModal();
+	}
 });
