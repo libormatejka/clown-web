@@ -73,5 +73,7 @@ check('/admin/page/create', 200, 'Přidat stránku')
 check('/admin/page/update/1', 200, 'Upravit stránku')
 check('/admin/profile/', 200, email)
 check('/preview/stranka/o-nas/', 200, 'Náhled stránky')
+check('/admin/redirect/', 200, 'Přesměrování')
+check('/admin/redirect/create', 200, 'Přidat přesměrování')
 
 sys.exit(1 if failures else 0)

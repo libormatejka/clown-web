@@ -6,6 +6,7 @@
 	"require": {
 		"php": ">=8.2",
 		"clown/core": "dev-main",
+		"clown/redirect": "dev-main",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -42,6 +43,11 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-core.git",
 			"name": "clown/core"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/libormatejka/clown-redirect.git",
+			"name": "clown/redirect"
 		}
 	]
 }
