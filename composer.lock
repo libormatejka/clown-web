@@ -171,12 +171,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-articles.git",
-                "reference": "8071c1542baf5e93b2191e0da285685e1ac2c158"
+                "reference": "fd254e40068164aff5c95c0a8404822febc0eddf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-articles/zipball/8071c1542baf5e93b2191e0da285685e1ac2c158",
-                "reference": "8071c1542baf5e93b2191e0da285685e1ac2c158",
+                "url": "https://api.github.com/repos/libormatejka/clown-articles/zipball/fd254e40068164aff5c95c0a8404822febc0eddf",
+                "reference": "fd254e40068164aff5c95c0a8404822febc0eddf",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
                 "source": "https://github.com/libormatejka/clown-articles/tree/master",
                 "issues": "https://github.com/libormatejka/clown-articles/issues"
             },
-            "time": "2026-10-28T11:43:51+00:00"
+            "time": "2026-10-28T15:48:50+00:00"
         },
         {
             "name": "clown/blocks",
@@ -279,12 +279,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-blog.git",
-                "reference": "c9ab63fd04376b5fb7832bdaa7516bf45eb96ff8"
+                "reference": "67d3773719b82fe31e7c3d6403c4f6c16305814a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-blog/zipball/c9ab63fd04376b5fb7832bdaa7516bf45eb96ff8",
-                "reference": "c9ab63fd04376b5fb7832bdaa7516bf45eb96ff8",
+                "url": "https://api.github.com/repos/libormatejka/clown-blog/zipball/67d3773719b82fe31e7c3d6403c4f6c16305814a",
+                "reference": "67d3773719b82fe31e7c3d6403c4f6c16305814a",
                 "shasum": ""
             },
             "require": {
@@ -327,7 +327,7 @@
                 "source": "https://github.com/libormatejka/clown-blog/tree/master",
                 "issues": "https://github.com/libormatejka/clown-blog/issues"
             },
-            "time": "2026-10-28T11:44:03+00:00"
+            "time": "2026-10-28T15:49:02+00:00"
         },
         {
             "name": "clown/cache",
@@ -383,12 +383,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-core.git",
-                "reference": "7052e2e3e49e6f7933d9e2adcf6f29e6d02f253a"
+                "reference": "ee291270a46180251a8ad3c915b989d9f0028512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/7052e2e3e49e6f7933d9e2adcf6f29e6d02f253a",
-                "reference": "7052e2e3e49e6f7933d9e2adcf6f29e6d02f253a",
+                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/ee291270a46180251a8ad3c915b989d9f0028512",
+                "reference": "ee291270a46180251a8ad3c915b989d9f0028512",
                 "shasum": ""
             },
             "require": {
@@ -433,7 +433,7 @@
                 "source": "https://github.com/libormatejka/clown-core/tree/main",
                 "issues": "https://github.com/libormatejka/clown-core/issues"
             },
-            "time": "2026-10-28T14:19:18+00:00"
+            "time": "2026-10-28T15:52:29+00:00"
         },
         {
             "name": "clown/front-extras",
@@ -492,12 +492,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-gallery.git",
-                "reference": "9babc00fe46adfe45b6f5d271b8f6fabe5e6aafe"
+                "reference": "ca08f65b99833d092a5cb7b3a3d1faacd7a452d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-gallery/zipball/9babc00fe46adfe45b6f5d271b8f6fabe5e6aafe",
-                "reference": "9babc00fe46adfe45b6f5d271b8f6fabe5e6aafe",
+                "url": "https://api.github.com/repos/libormatejka/clown-gallery/zipball/ca08f65b99833d092a5cb7b3a3d1faacd7a452d5",
+                "reference": "ca08f65b99833d092a5cb7b3a3d1faacd7a452d5",
                 "shasum": ""
             },
             "require": {
@@ -537,7 +537,7 @@
                 "source": "https://github.com/libormatejka/clown-gallery/tree/master",
                 "issues": "https://github.com/libormatejka/clown-gallery/issues"
             },
-            "time": "2026-10-28T11:43:47+00:00"
+            "time": "2026-10-28T15:49:14+00:00"
         },
         {
             "name": "clown/google-auth",
@@ -648,12 +648,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-podcast.git",
-                "reference": "bee8b45112729fce75d697a46aeffb637e328484"
+                "reference": "4e1537383cc414cf93c8e8617e0ee170602a4974"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-podcast/zipball/bee8b45112729fce75d697a46aeffb637e328484",
-                "reference": "bee8b45112729fce75d697a46aeffb637e328484",
+                "url": "https://api.github.com/repos/libormatejka/clown-podcast/zipball/4e1537383cc414cf93c8e8617e0ee170602a4974",
+                "reference": "4e1537383cc414cf93c8e8617e0ee170602a4974",
                 "shasum": ""
             },
             "require": {
@@ -696,7 +696,7 @@
                 "source": "https://github.com/libormatejka/clown-podcast/tree/master",
                 "issues": "https://github.com/libormatejka/clown-podcast/issues"
             },
-            "time": "2026-10-28T11:43:59+00:00"
+            "time": "2026-10-28T15:49:00+00:00"
         },
         {
             "name": "clown/portfolio",
@@ -704,12 +704,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-portfolio.git",
-                "reference": "f023478baf622b5fa931fb5302007b9a5eadc391"
+                "reference": "3fc6b6f34240400ae25c3452494eea944e020070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-portfolio/zipball/f023478baf622b5fa931fb5302007b9a5eadc391",
-                "reference": "f023478baf622b5fa931fb5302007b9a5eadc391",
+                "url": "https://api.github.com/repos/libormatejka/clown-portfolio/zipball/3fc6b6f34240400ae25c3452494eea944e020070",
+                "reference": "3fc6b6f34240400ae25c3452494eea944e020070",
                 "shasum": ""
             },
             "require": {
@@ -751,7 +751,7 @@
                 "source": "https://github.com/libormatejka/clown-portfolio/tree/master",
                 "issues": "https://github.com/libormatejka/clown-portfolio/issues"
             },
-            "time": "2026-10-28T11:43:55+00:00"
+            "time": "2026-10-28T15:48:58+00:00"
         },
         {
             "name": "clown/post",
@@ -759,12 +759,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-post.git",
-                "reference": "5c3b39f7765c1a7d7693915292e20fdc7e234381"
+                "reference": "9d498bb7b8cfd314ccd08d5900622ecf904ffa08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-post/zipball/5c3b39f7765c1a7d7693915292e20fdc7e234381",
-                "reference": "5c3b39f7765c1a7d7693915292e20fdc7e234381",
+                "url": "https://api.github.com/repos/libormatejka/clown-post/zipball/9d498bb7b8cfd314ccd08d5900622ecf904ffa08",
+                "reference": "9d498bb7b8cfd314ccd08d5900622ecf904ffa08",
                 "shasum": ""
             },
             "require": {
@@ -808,7 +808,7 @@
                 "source": "https://github.com/libormatejka/clown-post/tree/master",
                 "issues": "https://github.com/libormatejka/clown-post/issues"
             },
-            "time": "2026-10-28T11:44:07+00:00"
+            "time": "2026-10-28T15:49:11+00:00"
         },
         {
             "name": "clown/redirect",
@@ -870,12 +870,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-reviews.git",
-                "reference": "95adaaa7dd60deada4d34ac7d538447c22d99cef"
+                "reference": "25e97f9bd869923428f7f3010f21ec53a6293312"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-reviews/zipball/95adaaa7dd60deada4d34ac7d538447c22d99cef",
-                "reference": "95adaaa7dd60deada4d34ac7d538447c22d99cef",
+                "url": "https://api.github.com/repos/libormatejka/clown-reviews/zipball/25e97f9bd869923428f7f3010f21ec53a6293312",
+                "reference": "25e97f9bd869923428f7f3010f21ec53a6293312",
                 "shasum": ""
             },
             "require": {
@@ -919,7 +919,7 @@
                 "source": "https://github.com/libormatejka/clown-reviews/tree/master",
                 "issues": "https://github.com/libormatejka/clown-reviews/issues"
             },
-            "time": "2026-10-28T11:44:12+00:00"
+            "time": "2026-10-28T15:49:12+00:00"
         },
         {
             "name": "clown/revisions",

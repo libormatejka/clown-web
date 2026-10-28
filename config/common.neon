@@ -128,5 +128,32 @@ services:
 	# docs/CMS_CORE_MIGRATION_PLAN.md, B9).
 	- App\Module\Admin\Ai\AiPresenter(mediaLibraryPath: %uploadsSettings.mediaLibraryPath%)
 
+	# Content providery se registrují přes tag clown.contentProvider — registr
+	# je sestavuje ClownCoreExtension. Stejné instance jsou navíc tagované
+	# clown.taggable (TaggableRegistry — počty použití štítku v Admin:Tag).
+	# Bez tohoto zápisu by Front:Preview pro tyto typy vracel "nejsou na tomto
+	# webu nainstalované" (viz docs/CMS_CORE_MIGRATION_PLAN.md, Previewable).
+	-
+		factory: Clown\Core\ContentProvider\GenericContentProvider('Article', 'Článek', Clown\Articles\Entity\Article, Clown\Articles\Entity\ArticleTag, 'article', true)
+		tags: [clown.contentProvider, clown.taggable]
+	-
+		factory: Clown\Core\ContentProvider\GenericContentProvider('Post', 'Příspěvek', Clown\Post\Entity\Post, Clown\Post\Entity\PostTag, 'post', true)
+		tags: [clown.contentProvider, clown.taggable]
+	-
+		factory: Clown\Core\ContentProvider\GenericContentProvider('Review', 'Recenze', Clown\Reviews\Entity\Review, Clown\Reviews\Entity\ReviewTag, 'review', true)
+		tags: [clown.contentProvider, clown.taggable]
+	-
+		factory: Clown\Core\ContentProvider\GenericContentProvider('Portfolio', 'Portfolio', Clown\Portfolio\Entity\Portfolio, Clown\Portfolio\Entity\PortfolioTag, 'portfolio', false)
+		tags: [clown.contentProvider, clown.taggable]
+	-
+		factory: Clown\Core\ContentProvider\GenericContentProvider('Podcast', 'Podcast', Clown\Podcast\Entity\Podcast, Clown\Podcast\Entity\PodcastTag, 'podcast', true)
+		tags: [clown.contentProvider, clown.taggable]
+	-
+		factory: Clown\Core\ContentProvider\GenericContentProvider('Blog', 'Příspěvek na blogu', Clown\Blog\Entity\Blog, Clown\Blog\Entity\BlogTag, 'blog', true)
+		tags: [clown.contentProvider, clown.taggable]
+	-
+		factory: Clown\Core\ContentProvider\GenericContentProvider('Gallery', 'Fotogalerie', Clown\Gallery\Entity\Gallery, Clown\Gallery\Entity\GalleryTag, 'gallery', false)
+		tags: [clown.contentProvider, clown.taggable]
+
 includes:
 	- doctrine.neon
