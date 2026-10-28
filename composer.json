@@ -13,6 +13,7 @@
 		"clown/cache": "dev-main",
 		"clown/revisions": "dev-master",
 		"clown/front-extras": "dev-master",
+		"clown/gallery": "dev-master",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -84,6 +85,11 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-front-extras.git",
 			"name": "clown/front-extras"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/libormatejka/clown-gallery.git",
+			"name": "clown/gallery"
 		}
 	]
 }

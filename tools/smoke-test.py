@@ -81,5 +81,7 @@ check('/admin/tag/', 200, 'Seznam štítků')
 check('/admin/tag/create', 200, 'Vytvořit štítek')
 check('/admin/category/', 200, 'Seznam kategorií')
 check('/admin/category/create', 200, 'Vytvořit kategorii')
+check('/admin/gallery/', 200, 'Všechny galerie')
+check('/admin/gallery/create', 200, 'Vytvořit galerii')
 
 sys.exit(1 if failures else 0)

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9eeb9bd6b5ed6314f0df764c834ceb3c",
+    "content-hash": "038a7432be8e70dca730ff23a67c7f91",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -269,6 +269,59 @@
                 "issues": "https://github.com/libormatejka/clown-front-extras/issues"
             },
             "time": "2026-10-22T18:20:07+00:00"
+        },
+        {
+            "name": "clown/gallery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-gallery.git",
+                "reference": "9babc00fe46adfe45b6f5d271b8f6fabe5e6aafe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-gallery/zipball/9babc00fe46adfe45b6f5d271b8f6fabe5e6aafe",
+                "reference": "9babc00fe46adfe45b6f5d271b8f6fabe5e6aafe",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "clown/taxonomy": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/forms": "^3.2",
+                "php": ">=8.2",
+                "ublaboo/datagrid": "^7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Gallery\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Gallery\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – fotogalerie (Gallery, GalleryTag, GalleryMediaLibrary) s generickým admin CRUD",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-gallery/tree/master",
+                "issues": "https://github.com/libormatejka/clown-gallery/issues"
+            },
+            "time": "2026-10-28T11:43:47+00:00"
         },
         {
             "name": "clown/log",
@@ -4869,6 +4922,7 @@
         "clown/cache": 20,
         "clown/core": 20,
         "clown/front-extras": 20,
+        "clown/gallery": 20,
         "clown/log": 20,
         "clown/redirect": 20,
         "clown/revisions": 20,
