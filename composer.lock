@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "038a7432be8e70dca730ff23a67c7f91",
+    "content-hash": "56e8831e59ddde88373f33cd62d37832",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -60,6 +60,62 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/v3.1.1"
             },
             "time": "2026-04-05T21:06:35+00:00"
+        },
+        {
+            "name": "clown/articles",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:libormatejka/clown-articles.git",
+                "reference": "8071c1542baf5e93b2191e0da285685e1ac2c158"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/libormatejka/clown-articles/zipball/8071c1542baf5e93b2191e0da285685e1ac2c158",
+                "reference": "8071c1542baf5e93b2191e0da285685e1ac2c158",
+                "shasum": ""
+            },
+            "require": {
+                "clown/core": "*@dev",
+                "clown/gallery": "*@dev",
+                "clown/taxonomy": "*@dev",
+                "doctrine/orm": "^3.0",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
+                "nette/forms": "^3.2",
+                "nette/security": "^3.2",
+                "nette/utils": "^4.0",
+                "php": ">=8.2",
+                "ublaboo/datagrid": "^7.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "slevomat/coding-standard": "~8.17",
+                "squizlabs/php_codesniffer": "^4.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Clown\\Articles\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Clown\\Articles\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Clown CMS – články (Article, ArticleTag) s generickým admin CRUD",
+            "support": {
+                "source": "https://github.com/libormatejka/clown-articles/tree/master",
+                "issues": "https://github.com/libormatejka/clown-articles/issues"
+            },
+            "time": "2026-10-28T11:43:51+00:00"
         },
         {
             "name": "clown/blocks",
@@ -167,12 +223,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-core.git",
-                "reference": "8f7a2636a803e1664859021ad8560e0b8ef85be5"
+                "reference": "7052e2e3e49e6f7933d9e2adcf6f29e6d02f253a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/8f7a2636a803e1664859021ad8560e0b8ef85be5",
-                "reference": "8f7a2636a803e1664859021ad8560e0b8ef85be5",
+                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/7052e2e3e49e6f7933d9e2adcf6f29e6d02f253a",
+                "reference": "7052e2e3e49e6f7933d9e2adcf6f29e6d02f253a",
                 "shasum": ""
             },
             "require": {
@@ -217,7 +273,7 @@
                 "source": "https://github.com/libormatejka/clown-core/tree/main",
                 "issues": "https://github.com/libormatejka/clown-core/issues"
             },
-            "time": "2026-10-28T11:48:37+00:00"
+            "time": "2026-10-28T14:19:18+00:00"
         },
         {
             "name": "clown/front-extras",
@@ -4918,6 +4974,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "clown/articles": 20,
         "clown/blocks": 20,
         "clown/cache": 20,
         "clown/core": 20,

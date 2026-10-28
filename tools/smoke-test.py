@@ -34,7 +34,7 @@ def visible_text(html):
     return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', ' ', html)).strip()
 
 
-def check(path, expected_status=200, expected_text=None):
+def check(path, expected_status=200, expected_text=None, expect_layout=False):
     status, url, html = request(path)
     problems = []
     if status != expected_status:
@@ -43,6 +43,11 @@ def check(path, expected_status=200, expected_text=None):
         problems.append('v odpovědi je Tracy chyba')
     if expected_text and expected_text not in visible_text(html):
         problems.append('chybí text "%s"' % expected_text)
+    if expect_layout and expected_status == 200 and '<html' not in html:
+        # Nette umí vrátit HTTP 200 jen s obsahovým fragmentem bez <html>/layoutu
+        # (bez výjimky, beze stopy) — viz AdminPresenter::formatLayoutTemplateFiles
+        # fallback v clown-core. Kontrola textu samotná tohle neodhalí.
+        problems.append('chybí <html> (stránka se vyrenderovala bez layoutu)')
     print('%-4s %s -> %d %s' % ('FAIL' if problems else 'ok', path, status, '; '.join(problems)))
     if problems:
         failures.append(path)
@@ -53,7 +58,7 @@ check('/', 200, 'Clown Web')
 check('/o-nas/', 200, 'O nás')
 check('/o-projektu/', 200, 'O projektu')
 check('/neexistuje/', 404)
-check('/admin/', 200, 'Vítejte v administraci')
+check('/admin/', 200, 'Vítejte v administraci', expect_layout=True)
 
 url, html = request('/admin/login/')[1:]
 form = re.search(r'<form[^>]*>.*?</form>', html, re.S).group(0)
@@ -67,21 +72,23 @@ fields['email'], fields['password'] = email, password
 parsed = urllib.parse.urlparse(url)
 request(parsed.path + ('?' + parsed.query if parsed.query else ''), urllib.parse.urlencode(fields).encode())
 
-check('/admin/', 200, 'Počet stránek')
-check('/admin/page/', 200, 'Seznam stránek')
-check('/admin/page/create', 200, 'Přidat stránku')
-check('/admin/page/update/1', 200, 'Upravit stránku')
-check('/admin/profile/', 200, email)
+check('/admin/', 200, 'Počet stránek', expect_layout=True)
+check('/admin/page/', 200, 'Seznam stránek', expect_layout=True)
+check('/admin/page/create', 200, 'Přidat stránku', expect_layout=True)
+check('/admin/page/update/1', 200, 'Upravit stránku', expect_layout=True)
+check('/admin/profile/', 200, email, expect_layout=True)
 check('/preview/stranka/o-nas/', 200, 'Náhled stránky')
-check('/admin/redirect/', 200, 'Přesměrování')
-check('/admin/redirect/create', 200, 'Přidat přesměrování')
-check('/admin/block/', 200, 'Seznam blocků')
-check('/admin/block/create', 200, 'Přidat block')
-check('/admin/tag/', 200, 'Seznam štítků')
-check('/admin/tag/create', 200, 'Vytvořit štítek')
-check('/admin/category/', 200, 'Seznam kategorií')
-check('/admin/category/create', 200, 'Vytvořit kategorii')
-check('/admin/gallery/', 200, 'Všechny galerie')
-check('/admin/gallery/create', 200, 'Vytvořit galerii')
+check('/admin/redirect/', 200, 'Přesměrování', expect_layout=True)
+check('/admin/redirect/create', 200, 'Přidat přesměrování', expect_layout=True)
+check('/admin/block/', 200, 'Seznam blocků', expect_layout=True)
+check('/admin/block/create', 200, 'Přidat block', expect_layout=True)
+check('/admin/tag/', 200, 'Seznam štítků', expect_layout=True)
+check('/admin/tag/create', 200, 'Vytvořit štítek', expect_layout=True)
+check('/admin/category/', 200, 'Seznam kategorií', expect_layout=True)
+check('/admin/category/create', 200, 'Vytvořit kategorii', expect_layout=True)
+check('/admin/gallery/', 200, 'Všechny galerie', expect_layout=True)
+check('/admin/gallery/create', 200, 'Vytvořit galerii', expect_layout=True)
+check('/admin/article/', 200, 'Seznam článků', expect_layout=True)
+check('/admin/article/create', 200, 'Napsat článek', expect_layout=True)
 
 sys.exit(1 if failures else 0)

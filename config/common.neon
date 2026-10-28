@@ -20,6 +20,7 @@ extensions:
 	clownRevisions: Clown\Revisions\DI\ClownRevisionsExtension
 	clownFrontExtras: Clown\FrontExtras\DI\ClownFrontExtrasExtension
 	clownGallery: Clown\Gallery\DI\ClownGalleryExtension
+	clownArticles: Clown\Articles\DI\ClownArticlesExtension
 
 clownCore:
 	templateOverrideDir: %appDir%/templates/override
