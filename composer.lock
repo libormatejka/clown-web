@@ -171,12 +171,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-articles.git",
-                "reference": "fd254e40068164aff5c95c0a8404822febc0eddf"
+                "reference": "c6c1c2101e90d64476ee64ac54e5c6346def5d28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-articles/zipball/fd254e40068164aff5c95c0a8404822febc0eddf",
-                "reference": "fd254e40068164aff5c95c0a8404822febc0eddf",
+                "url": "https://api.github.com/repos/libormatejka/clown-articles/zipball/c6c1c2101e90d64476ee64ac54e5c6346def5d28",
+                "reference": "c6c1c2101e90d64476ee64ac54e5c6346def5d28",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
                 "source": "https://github.com/libormatejka/clown-articles/tree/master",
                 "issues": "https://github.com/libormatejka/clown-articles/issues"
             },
-            "time": "2026-10-28T15:48:50+00:00"
+            "time": "2026-10-28T16:01:43+00:00"
         },
         {
             "name": "clown/blocks",
