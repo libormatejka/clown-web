@@ -7,9 +7,9 @@ a škálovat (přidat/odebrat balíčky, přepsat šablony) je rychlejší než
 začínat od nuly.
 
 Podrobná architektura Clown CMS (extension points, co je vždy
-site-specific, provozní detaily) je v `docs/CMS_CORE_ARCHITECTURE.md`
-repozitáře `collectorboy` — tenhle README je jen "jak spustit a rozšiřovat
-tenhle konkrétní web".
+site-specific, provozní detaily) je v [`docs/CMS_CORE_ARCHITECTURE.md`](docs/CMS_CORE_ARCHITECTURE.md)
+přímo v tomhle repu (kopie z `collectorboy`, kde celá extrakce probíhala) —
+tenhle README je jen "jak spustit a rozšiřovat tenhle konkrétní web".
 
 Obsah webu:
 
