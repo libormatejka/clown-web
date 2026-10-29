@@ -4,3 +4,13 @@ parameters:
 		user: root
 		password: root
 		dbname: clownweb
+
+	# Reálné Google OAuth credentials (Google Cloud Console → Credentials
+	# → OAuth client ID, typ "Web application") — redirectUri musí přesně
+	# odpovídat "Authorized redirect URI" tam nastavenému. Bez vyplnění
+	# zůstává přihlášení přes Google nefunkční (placeholdery z common.neon),
+	# ostatní přihlášení (PasswordAuthenticator) tím není ovlivněno.
+	google:
+		clientId: dev-placeholder-client-id
+		clientSecret: dev-placeholder-client-secret
+		redirectUri: http://localhost:8081/admin/login/google-callback

@@ -11,6 +11,11 @@ parameters:
 		apiKey: dev-placeholder-gemini-api-key
 		imageApiKey: dev-placeholder-gemini-image-api-key
 
+	google:
+		clientId: dev-placeholder-client-id
+		clientSecret: dev-placeholder-client-secret
+		redirectUri: http://localhost:8081/admin/login/google-callback
+
 	version:
 		css: 0.1.0
 		js: 0.1.0
@@ -55,9 +60,9 @@ clownApi:
 	debugMode: %debugMode%
 
 clownGoogleAuth:
-	clientId: dev-placeholder-client-id
-	clientSecret: dev-placeholder-client-secret
-	redirectUri: http://localhost:8081/admin/login/google-callback
+	clientId: %google.clientId%
+	clientSecret: %google.clientSecret%
+	redirectUri: %google.redirectUri%
 
 clownAi:
 	apiKey: %ai.apiKey%
