@@ -1,0 +1,39 @@
+{block content}
+{control headerBars $headerBarsValues}
+
+<div class="px-4 sm:px-6 lg:px-8">
+	<div class="flex flex-col">
+		<p class="mb-4 text-sm text-gray-500">Balíčky z <code>composer.lock</code> (<code>clown/*</code>) — core a addony, ze kterých je tenhle web poskládaný.</p>
+
+		<div class="md:-my-2 md:-mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+			<div class="block min-w-full py-2 align-middle md:px-6 lg:px-8">
+				<table class="min-w-full divide-y divide-gray-300">
+					<thead>
+						<tr>
+							<th scope="col" class="py-4 text-left text-sm font-semibold text-gray-900">Balíček</th>
+							<th scope="col" class="px-4 py-4 text-left text-sm font-semibold text-gray-900">Verze</th>
+							<th scope="col" class="px-4 py-4 text-left text-sm font-semibold text-gray-900">Commit</th>
+							<th scope="col" class="px-4 py-4 text-left text-sm font-semibold text-gray-900">Popis</th>
+						</tr>
+					</thead>
+					<tbody class="divide-y divide-gray-200">
+						{if count($packages) > 0}
+							{foreach $packages as $package}
+								<tr>
+									<td class="whitespace-nowrap py-4 pr-3 text-sm font-medium text-gray-900">{$package['name']}</td>
+									<td class="whitespace-nowrap px-4 py-4 text-sm text-gray-500">{$package['version']}</td>
+									<td class="whitespace-nowrap px-4 py-4 text-sm text-gray-500"><code>{$package['reference']}</code></td>
+									<td class="px-4 py-4 text-sm text-gray-500">{$package['description']}</td>
+								</tr>
+							{/foreach}
+						{else}
+							<tr>
+								<td colspan="4" class="text-center whitespace-nowrap py-4 pr-3 text-sm text-gray-500">composer.lock nenalezen nebo neobsahuje žádné clown/* balíčky.</td>
+							</tr>
+						{/if}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

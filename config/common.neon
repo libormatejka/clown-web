@@ -124,6 +124,10 @@ services:
 	- App\Router\RouterFactory::createRouter
 	- App\Model\Service\AssetManifestResolver
 	- App\Model\Command\SeedCommand
+	- App\Model\Service\PackageCatalogService(composerLockPath: %rootDir%/composer.lock)
+	-
+		factory: App\Model\Service\PackagesAdminMenuProvider
+		tags: [clown.adminMenuItem]
 
 	# AiPresenter (Clown\Ai) má mediaLibraryDir typovaný přes
 	# Clown\Core\Settings\MediaLibraryDir (autowireable), ale

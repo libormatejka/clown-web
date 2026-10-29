@@ -107,5 +107,6 @@ check('/admin/menu/', 200, 'Seznam menu', expect_layout=True)
 check('/admin/menu/create', 200, 'Vytvořit nové menu', expect_layout=True)
 check('/admin/menu-item/', 200, 'Seznam položek', expect_layout=True)
 check('/admin/menu-item/create', 200, 'Vytvořit položku v menu', expect_layout=True)
+check('/admin/packages/', 200, 'clown/core', expect_layout=True)
 
 sys.exit(1 if failures else 0)
