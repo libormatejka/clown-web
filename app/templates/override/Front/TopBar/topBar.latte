@@ -1,0 +1,25 @@
+<header class="site-header">
+	<div class="site-header-inner container">
+		<a href="{plink Homepage:default}" class="site-brand">Clown Web</a>
+		<nav class="site-nav" aria-label="Hlavní menu">
+			<ul>
+				{if count($menuData) > 0}
+					{foreach $menuData as $menu}
+						<li>
+							<a href="{$menu['slug']}" target="{$menu['target']}">{$menu['title']}</a>
+							{if $menu['hasSubmenu']}
+								<ul>
+									{foreach $menu['submenu'] as $submenu}
+										<li>
+											<a href="{$submenu['slug']}" target="{$submenu['target']}">{$submenu['title']}</a>
+										</li>
+									{/foreach}
+								</ul>
+							{/if}
+						</li>
+					{/foreach}
+				{/if}
+			</ul>
+		</nav>
+	</div>
+</header>

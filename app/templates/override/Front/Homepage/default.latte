@@ -1,0 +1,18 @@
+{block content}
+<section class="hero">
+	<div class="container">
+		<p class="hero-eyebrow">Clown CMS &mdash; referenční web</p>
+		<h1>{$webTitle}</h1>
+		<p class="hero-lead">Ukázkový web postavený na balíčku <code>clown/core</code> a addonech, se kterými je vidět, jak se Clown CMS sestavuje a rozšiřuje.</p>
+	</div>
+</section>
+
+<section class="container" n:if="$pages !== []">
+	<h2 class="section-title">Stránky</h2>
+	<div class="page-grid">
+		<a n:foreach="$pages as $page" n:href="Page:detail slug: $page->getSlug()" class="page-card">
+			<h3>{$page->getTitle()}</h3>
+			<p n:if="$page->getPerex() !== null">{$page->getPerex()}</p>
+		</a>
+	</div>
+</section>

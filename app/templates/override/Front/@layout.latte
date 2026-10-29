@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	{control metaTags}
+	{control assets:css}
+	{control assets:jsHeader}
+</head>
+<body>
+	<div class="site">
+		{control topBar $topBarMenuData}
+
+		<main class="site-main">
+			{include content}
+		</main>
+
+		{control footer $footerMenuData}
+	</div>
+	{control assets:jsFooter}
+</body>
+</html>

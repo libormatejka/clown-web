@@ -1,0 +1,9 @@
+{block content}
+<article class="container page-detail">
+	<a n:href="Homepage:default" class="back-link">&larr; Zpět na hlavní stránku</a>
+	<h1>{$page->getTitle()}</h1>
+	<p class="page-perex" n:if="$page->getPerex() !== null">{$page->getPerex()}</p>
+	<div class="content-area">
+		{$page->getContent()|noescape}
+	</div>
+</article>

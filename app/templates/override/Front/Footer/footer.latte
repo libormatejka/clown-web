@@ -1,0 +1,14 @@
+<footer class="site-footer" role="contentinfo">
+	<div class="site-footer-inner container">
+		<p class="site-footer-brand">&copy; {date('Y')} Clown Web &mdash; postaveno na <a href="https://github.com/libormatejka/clown-core">Clown CMS</a>.</p>
+		<nav aria-label="Patička" n:if="count($menuData) > 0">
+			<ul>
+				{foreach $menuData as $menu}
+					<li>
+						<a href="{$menu['slug']}" target="{$menu['target']}">{$menu['title']}</a>
+					</li>
+				{/foreach}
+			</ul>
+		</nav>
+	</div>
+</footer>
