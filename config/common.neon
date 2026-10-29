@@ -128,6 +128,12 @@ services:
 	# docs/CMS_CORE_MIGRATION_PLAN.md, B9).
 	- App\Module\Admin\Ai\AiPresenter(mediaLibraryPath: %uploadsSettings.mediaLibraryPath%)
 
+	# Routa pro site-specific per-content API presentery (TinyMCE shortcode
+	# tlačítka), viz docs/CMS_CORE_MIGRATION_PLAN.md, B10.
+	-
+		factory: App\Router\ContentApiRouteFactory
+		tags: [clown.route]
+
 	# Content providery se registrují přes tag clown.contentProvider — registr
 	# je sestavuje ClownCoreExtension. Stejné instance jsou navíc tagované
 	# clown.taggable (TaggableRegistry — počty použití štítku v Admin:Tag).
