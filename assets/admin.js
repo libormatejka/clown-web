@@ -10,6 +10,7 @@ import '@contributte/datagrid/dist/datagrid-full.js';
 
 import './admin/css/tailwind.css';
 
+import AIChat from '@libormatejka/clown-ai-assets/admin/js/AIChat';
 import AlertCloseButton from '@libormatejka/clown-core-assets/admin/js/AlertCloseButton';
 import DataGridColChooser from '@libormatejka/clown-core-assets/admin/js/DataGridColChooser';
 import GalleryManager from '@libormatejka/clown-gallery-assets/admin/js/GalleryManager';
@@ -21,6 +22,7 @@ import TableList from '@libormatejka/clown-core-assets/admin/js/TableList';
 import UserMenuButton from '@libormatejka/clown-core-assets/admin/js/UserMenuButton';
 
 DataGridColChooser.initOnLoad();
+AIChat.initOnLoad();
 AlertCloseButton.initOnLoad();
 SidebarMenuButton.initOnLoad();
 UserMenuButton.initOnLoad();
