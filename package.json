@@ -19,6 +19,7 @@
 	"dependencies": {
 		"@contributte/datagrid": "^7.1.0",
 		"@libormatejka/clown-core-assets": "github:libormatejka/clown-core-assets#master",
+		"@libormatejka/clown-gallery-assets": "github:libormatejka/clown-gallery-assets#master",
 		"jquery": "^3.7.1",
 		"nette-forms": "^3.3.0",
 		"tinymce": "^6.8.6"

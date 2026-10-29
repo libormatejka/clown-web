@@ -12,6 +12,7 @@ import './admin/css/tailwind.css';
 
 import AlertCloseButton from '@libormatejka/clown-core-assets/admin/js/AlertCloseButton';
 import DataGridColChooser from '@libormatejka/clown-core-assets/admin/js/DataGridColChooser';
+import GalleryManager from '@libormatejka/clown-gallery-assets/admin/js/GalleryManager';
 import GenerateSlug from '@libormatejka/clown-core-assets/admin/js/GenerateSlug';
 import MediaModal from '@libormatejka/clown-core-assets/admin/js/MediaModal';
 import SidebarMenuButton from '@libormatejka/clown-core-assets/admin/js/SidebarMenuButton';
@@ -40,5 +41,27 @@ TinymceEditor.render();
 document.addEventListener('DOMContentLoaded', () => {
 	if (document.getElementById('mediaModalActive')) {
 		new MediaModal();
+	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	// Inicializace GalleryManager pro Create Gallery
+	const createGalleryForm = document.querySelector('#frm-createGallery-form');
+	if (createGalleryForm) {
+		new GalleryManager({
+			token: 'clown-web',
+			rootSelector: '#frm-createGallery-form',
+			itemsPerPage: 50,
+		});
+	}
+
+	// Inicializace GalleryManager pro Update Gallery
+	const updateGalleryForm = document.querySelector('#frm-updateGallery-form');
+	if (updateGalleryForm) {
+		new GalleryManager({
+			token: 'clown-web',
+			rootSelector: '#frm-updateGallery-form',
+			itemsPerPage: 50,
+		});
 	}
 });
