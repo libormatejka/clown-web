@@ -383,12 +383,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-core.git",
-                "reference": "ee291270a46180251a8ad3c915b989d9f0028512"
+                "reference": "e709fc9b93acfc618e1db8c2cd9278033b3ebce8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/ee291270a46180251a8ad3c915b989d9f0028512",
-                "reference": "ee291270a46180251a8ad3c915b989d9f0028512",
+                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/e709fc9b93acfc618e1db8c2cd9278033b3ebce8",
+                "reference": "e709fc9b93acfc618e1db8c2cd9278033b3ebce8",
                 "shasum": ""
             },
             "require": {
@@ -433,7 +433,7 @@
                 "source": "https://github.com/libormatejka/clown-core/tree/main",
                 "issues": "https://github.com/libormatejka/clown-core/issues"
             },
-            "time": "2026-10-28T15:52:29+00:00"
+            "time": "2026-10-29T15:56:19+00:00"
         },
         {
             "name": "clown/front-extras",
