@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35d5d3ed6ad0ced71f697debc75ee507",
+    "content-hash": "4bc07749ebf9d87aac8f9a42151ff3c6",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -60,322 +60,6 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/v3.1.1"
             },
             "time": "2026-04-05T21:06:35+00:00"
-        },
-        {
-            "name": "clown/ai",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-ai.git",
-                "reference": "7b8a06aeccc976f85d9742bbd0792b20e47d546b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-ai/zipball/7b8a06aeccc976f85d9742bbd0792b20e47d546b",
-                "reference": "7b8a06aeccc976f85d9742bbd0792b20e47d546b",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "guzzlehttp/guzzle": "^7.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/http": "^3.3",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Ai\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Ai\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – AI asistent pro admin (generování meta/perexu, kontrola gramatiky, popisky obrázků přes Gemini API)",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-ai/tree/master",
-                "issues": "https://github.com/libormatejka/clown-ai/issues"
-            },
-            "time": "2026-10-28T11:44:16+00:00"
-        },
-        {
-            "name": "clown/api",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-api.git",
-                "reference": "ebdc821e7e16e77e6749c3304843740c87967b1c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-api/zipball/ebdc821e7e16e77e6749c3304843740c87967b1c",
-                "reference": "ebdc821e7e16e77e6749c3304843740c87967b1c",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/http": "^3.3",
-                "nette/utils": "^4.0",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Api\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Api\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – core API infrastruktura (ApiKey ověření, ApiLog logování, admin výpis logů)",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-api/tree/master",
-                "issues": "https://github.com/libormatejka/clown-api/issues"
-            },
-            "time": "2026-10-28T18:52:39+00:00"
-        },
-        {
-            "name": "clown/articles",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-articles.git",
-                "reference": "c6c1c2101e90d64476ee64ac54e5c6346def5d28"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-articles/zipball/c6c1c2101e90d64476ee64ac54e5c6346def5d28",
-                "reference": "c6c1c2101e90d64476ee64ac54e5c6346def5d28",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "clown/gallery": "*@dev",
-                "clown/taxonomy": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/security": "^3.2",
-                "nette/utils": "^4.0",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Articles\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Articles\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – články (Article, ArticleTag) s generickým admin CRUD",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-articles/tree/master",
-                "issues": "https://github.com/libormatejka/clown-articles/issues"
-            },
-            "time": "2026-10-28T16:01:43+00:00"
-        },
-        {
-            "name": "clown/blocks",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-blocks.git",
-                "reference": "efc3336e1a72f9cc51b24b08188ffc8be7fa8ad2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-blocks/zipball/efc3336e1a72f9cc51b24b08188ffc8be7fa8ad2",
-                "reference": "efc3336e1a72f9cc51b24b08188ffc8be7fa8ad2",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Blocks\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Blocks\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – addon pro vlastní HTML/JS bloky vkládané přes URL/shortcode",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-blocks/tree/main",
-                "issues": "https://github.com/libormatejka/clown-blocks/issues"
-            },
-            "time": "2026-10-22T08:56:32+00:00"
-        },
-        {
-            "name": "clown/blog",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-blog.git",
-                "reference": "67d3773719b82fe31e7c3d6403c4f6c16305814a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-blog/zipball/67d3773719b82fe31e7c3d6403c4f6c16305814a",
-                "reference": "67d3773719b82fe31e7c3d6403c4f6c16305814a",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "clown/gallery": "*@dev",
-                "clown/taxonomy": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/security": "^3.2",
-                "nette/utils": "^4.0",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Blog\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Blog\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – blog (Blog, BlogTag) s generickým admin CRUD",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-blog/tree/master",
-                "issues": "https://github.com/libormatejka/clown-blog/issues"
-            },
-            "time": "2026-10-28T15:49:02+00:00"
-        },
-        {
-            "name": "clown/cache",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-cache.git",
-                "reference": "1ffe47f120df1bb120a1816657bdc9770a45921a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-cache/zipball/1ffe47f120df1bb120a1816657bdc9770a45921a",
-                "reference": "1ffe47f120df1bb120a1816657bdc9770a45921a",
-                "shasum": ""
-            },
-            "require": {
-                "nette/caching": "^3.4",
-                "nette/di": "^3.2",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Cache\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Cache\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – generická front cache infrastruktura (FrontCacheService, CacheKeys)",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-cache/tree/main",
-                "issues": "https://github.com/libormatejka/clown-cache/issues"
-            },
-            "time": "2026-10-22T10:17:43+00:00"
         },
         {
             "name": "clown/core",
@@ -434,645 +118,6 @@
                 "issues": "https://github.com/libormatejka/clown-core/issues"
             },
             "time": "2026-10-29T15:56:19+00:00"
-        },
-        {
-            "name": "clown/front-extras",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-front-extras.git",
-                "reference": "6ff77ed70f56d5915f1dcdfe9e6dd3f1898014e7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-front-extras/zipball/6ff77ed70f56d5915f1dcdfe9e6dd3f1898014e7",
-                "reference": "6ff77ed70f56d5915f1dcdfe9e6dd3f1898014e7",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/http": "^3.3",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\FrontExtras\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\FrontExtras\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – nezávislé front rozšíření (GTM, StructuredData, Shortcode engine, SearchBox)",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-front-extras/tree/master",
-                "issues": "https://github.com/libormatejka/clown-front-extras/issues"
-            },
-            "time": "2026-10-22T18:20:07+00:00"
-        },
-        {
-            "name": "clown/gallery",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-gallery.git",
-                "reference": "ca08f65b99833d092a5cb7b3a3d1faacd7a452d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-gallery/zipball/ca08f65b99833d092a5cb7b3a3d1faacd7a452d5",
-                "reference": "ca08f65b99833d092a5cb7b3a3d1faacd7a452d5",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "clown/taxonomy": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Gallery\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Gallery\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – fotogalerie (Gallery, GalleryTag, GalleryMediaLibrary) s generickým admin CRUD",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-gallery/tree/master",
-                "issues": "https://github.com/libormatejka/clown-gallery/issues"
-            },
-            "time": "2026-10-28T15:49:14+00:00"
-        },
-        {
-            "name": "clown/google-auth",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-google-auth.git",
-                "reference": "5148f9fc66e7a136f0dd85050dd576444220b8f1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-google-auth/zipball/5148f9fc66e7a136f0dd85050dd576444220b8f1",
-                "reference": "5148f9fc66e7a136f0dd85050dd576444220b8f1",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "doctrine/orm": "^3.0",
-                "league/oauth2-google": "^5.0",
-                "nette/di": "^3.2",
-                "nette/http": "^3.3",
-                "nette/security": "^3.2",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\GoogleAuth\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\GoogleAuth\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – Google OAuth přihlášení do administrace (IOAuthLoginProvider pro clown-core)",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-google-auth/tree/master",
-                "issues": "https://github.com/libormatejka/clown-google-auth/issues"
-            },
-            "time": "2026-10-24T12:22:09+00:00"
-        },
-        {
-            "name": "clown/log",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-log.git",
-                "reference": "44fd0ee72d30bb29d2edbd3e2f3dbb31dbcc38b2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-log/zipball/44fd0ee72d30bb29d2edbd3e2f3dbb31dbcc38b2",
-                "reference": "44fd0ee72d30bb29d2edbd3e2f3dbb31dbcc38b2",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "doctrine/dbal": "^4.0",
-                "doctrine/orm": "^3.0",
-                "nette/di": "^3.2",
-                "nette/http": "^3.2",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Log\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Log\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – generický auditní log (Log, LogType, EntityLogSubscriber, ManualLogService)",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-log/tree/master",
-                "issues": "https://github.com/libormatejka/clown-log/issues"
-            },
-            "time": "2026-10-24T20:22:05+00:00"
-        },
-        {
-            "name": "clown/podcast",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-podcast.git",
-                "reference": "4e1537383cc414cf93c8e8617e0ee170602a4974"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-podcast/zipball/4e1537383cc414cf93c8e8617e0ee170602a4974",
-                "reference": "4e1537383cc414cf93c8e8617e0ee170602a4974",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "clown/gallery": "*@dev",
-                "clown/taxonomy": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/security": "^3.2",
-                "nette/utils": "^4.0",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Podcast\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Podcast\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – podcast (Podcast, PodcastTag) s generickým admin CRUD",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-podcast/tree/master",
-                "issues": "https://github.com/libormatejka/clown-podcast/issues"
-            },
-            "time": "2026-10-28T15:49:00+00:00"
-        },
-        {
-            "name": "clown/portfolio",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-portfolio.git",
-                "reference": "3fc6b6f34240400ae25c3452494eea944e020070"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-portfolio/zipball/3fc6b6f34240400ae25c3452494eea944e020070",
-                "reference": "3fc6b6f34240400ae25c3452494eea944e020070",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "clown/taxonomy": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/security": "^3.2",
-                "nette/utils": "^4.0",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Portfolio\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Portfolio\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – portfolio (Portfolio, PortfolioTag) s generickým admin CRUD",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-portfolio/tree/master",
-                "issues": "https://github.com/libormatejka/clown-portfolio/issues"
-            },
-            "time": "2026-10-28T15:48:58+00:00"
-        },
-        {
-            "name": "clown/post",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-post.git",
-                "reference": "9d498bb7b8cfd314ccd08d5900622ecf904ffa08"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-post/zipball/9d498bb7b8cfd314ccd08d5900622ecf904ffa08",
-                "reference": "9d498bb7b8cfd314ccd08d5900622ecf904ffa08",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "clown/gallery": "*@dev",
-                "clown/revisions": "*@dev",
-                "clown/taxonomy": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/security": "^3.2",
-                "nette/utils": "^4.0",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Post\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Post\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – post (Post, PostTag, PostRevision) s generickým admin CRUD a revizemi",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-post/tree/master",
-                "issues": "https://github.com/libormatejka/clown-post/issues"
-            },
-            "time": "2026-10-28T15:49:11+00:00"
-        },
-        {
-            "name": "clown/redirect",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-redirect.git",
-                "reference": "1d8502a0ce5d59f56ad8840c5dcad5ea43c844ec"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-redirect/zipball/1d8502a0ce5d59f56ad8840c5dcad5ea43c844ec",
-                "reference": "1d8502a0ce5d59f56ad8840c5dcad5ea43c844ec",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/caching": "^3.4",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/http": "^3.3",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Redirect\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Redirect\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – addon pro 301/302 přesměrování",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-redirect/tree/main",
-                "issues": "https://github.com/libormatejka/clown-redirect/issues"
-            },
-            "time": "2026-10-15T17:52:49+00:00"
-        },
-        {
-            "name": "clown/reviews",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-reviews.git",
-                "reference": "25e97f9bd869923428f7f3010f21ec53a6293312"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-reviews/zipball/25e97f9bd869923428f7f3010f21ec53a6293312",
-                "reference": "25e97f9bd869923428f7f3010f21ec53a6293312",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "clown/gallery": "*@dev",
-                "clown/revisions": "*@dev",
-                "clown/taxonomy": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "nette/security": "^3.2",
-                "nette/utils": "^4.0",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Reviews\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Reviews\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – recenze (Review, ReviewTag, ReviewRevision) s generickým admin CRUD a revizemi",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-reviews/tree/master",
-                "issues": "https://github.com/libormatejka/clown-reviews/issues"
-            },
-            "time": "2026-10-28T15:49:12+00:00"
-        },
-        {
-            "name": "clown/revisions",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-revisions.git",
-                "reference": "eede2da77647e1aab3c5259894342ff411c93840"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-revisions/zipball/eede2da77647e1aab3c5259894342ff411c93840",
-                "reference": "eede2da77647e1aab3c5259894342ff411c93840",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Revisions\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Revisions\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – generický revizní mechanismus (AbstractRevisionSubscriber, RevisionDiffService, admin komponenta Revisions)",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-revisions/tree/master",
-                "issues": "https://github.com/libormatejka/clown-revisions/issues"
-            },
-            "time": "2026-10-22T17:41:51+00:00"
-        },
-        {
-            "name": "clown/taxonomy",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-taxonomy.git",
-                "reference": "f1fb75617941438d28f2de9574076503e1bd6a8b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-taxonomy/zipball/f1fb75617941438d28f2de9574076503e1bd6a8b",
-                "reference": "f1fb75617941438d28f2de9574076503e1bd6a8b",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/forms": "^3.2",
-                "php": ">=8.2",
-                "ublaboo/datagrid": "^7.0"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\Taxonomy\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\Taxonomy\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – taxonomie (Tag, Category) s generickým admin CRUD",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-taxonomy/tree/master",
-                "issues": "https://github.com/libormatejka/clown-taxonomy/issues"
-            },
-            "time": "2026-10-22T20:38:34+00:00"
-        },
-        {
-            "name": "clown/webmcp",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:libormatejka/clown-webmcp.git",
-                "reference": "7205ee4b7ce31d56d80d111dee973fc4eaee3c83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-webmcp/zipball/7205ee4b7ce31d56d80d111dee973fc4eaee3c83",
-                "reference": "7205ee4b7ce31d56d80d111dee973fc4eaee3c83",
-                "shasum": ""
-            },
-            "require": {
-                "clown/core": "*@dev",
-                "doctrine/orm": "^3.0",
-                "nette/application": "^3.2",
-                "nette/di": "^3.2",
-                "nette/http": "^3.3",
-                "php": ">=8.2"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.0",
-                "phpstan/phpstan-nette": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "slevomat/coding-standard": "~8.17",
-                "squizlabs/php_codesniffer": "^4.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Clown\\WebMcp\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Clown\\WebMcp\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Clown CMS – core WebMcp infrastruktura (MCP přes HTTP pro AI nástroje, logování volání)",
-            "support": {
-                "source": "https://github.com/libormatejka/clown-webmcp/tree/master",
-                "issues": "https://github.com/libormatejka/clown-webmcp/issues"
-            },
-            "time": "2026-10-24T12:01:16+00:00"
         },
         {
             "name": "contributte/console",
@@ -2225,337 +1270,6 @@
             "time": "2026-10-03T14:15:35+00:00"
         },
         {
-            "name": "guzzlehttp/guzzle",
-            "version": "7.16.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "81755d989b3007ca7f88a069857553cd08e7dc2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/81755d989b3007ca7f88a069857553cd08e7dc2e",
-                "reference": "81755d989b3007ca7f88a069857553cd08e7dc2e",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "guzzlehttp/promises": "^2.6",
-                "guzzlehttp/psr7": "^2.13.2",
-                "php": "^7.2.5 || ^8.0",
-                "psr/http-client": "^1.0",
-                "symfony/deprecation-contracts": "^2.5 || ^3.0",
-                "symfony/polyfill-php80": "^1.25"
-            },
-            "provide": {
-                "psr/http-client-implementation": "1.0"
-            },
-            "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.2",
-                "ext-curl": "*",
-                "guzzle/client-integration-tests": "3.0.3",
-                "guzzlehttp/test-server": "^0.7",
-                "php-http/message-factory": "^1.1",
-                "phpunit/phpunit": "^8.5.52 || ^9.6.34",
-                "psr/log": "^1.1 || ^2.0 || ^3.0"
-            },
-            "suggest": {
-                "ext-curl": "Required for CURL handler support",
-                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
-                "psr/log": "Required for using the Log middleware"
-            },
-            "type": "library",
-            "extra": {
-                "bamarni-bin": {
-                    "bin-links": true,
-                    "forward-command": false
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "hello@gjcampbell.co.uk",
-                    "homepage": "https://github.com/GrahamCampbell"
-                },
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Jeremy Lindblom",
-                    "email": "jeremeamia@gmail.com",
-                    "homepage": "https://github.com/jeremeamia"
-                },
-                {
-                    "name": "George Mponos",
-                    "email": "gmponos@gmail.com",
-                    "homepage": "https://github.com/gmponos"
-                },
-                {
-                    "name": "Tobias Nyholm",
-                    "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/Nyholm"
-                },
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com",
-                    "homepage": "https://github.com/sagikazarmark"
-                },
-                {
-                    "name": "Tobias Schultze",
-                    "email": "webmaster@tubo-world.de",
-                    "homepage": "https://github.com/Tobion"
-                }
-            ],
-            "description": "Guzzle is a PHP HTTP client library",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "psr-18",
-                "psr-7",
-                "rest",
-                "web service"
-            ],
-            "support": {
-                "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.16.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/Nyholm",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/guzzle",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-10-25T21:35:21+00:00"
-        },
-        {
-            "name": "guzzlehttp/promises",
-            "version": "2.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/promises.git",
-                "reference": "3d88c829bd5f13d13847b39067dbf09a60af2154"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/3d88c829bd5f13d13847b39067dbf09a60af2154",
-                "reference": "3d88c829bd5f13d13847b39067dbf09a60af2154",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2.5 || ^8.0",
-                "symfony/deprecation-contracts": "^2.5 || ^3.0"
-            },
-            "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.2",
-                "phpunit/phpunit": "^8.5.52 || ^9.6.34"
-            },
-            "type": "library",
-            "extra": {
-                "bamarni-bin": {
-                    "bin-links": true,
-                    "forward-command": false
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "hello@gjcampbell.co.uk",
-                    "homepage": "https://github.com/GrahamCampbell"
-                },
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "Tobias Nyholm",
-                    "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/Nyholm"
-                },
-                {
-                    "name": "Tobias Schultze",
-                    "email": "webmaster@tubo-world.de",
-                    "homepage": "https://github.com/Tobion"
-                }
-            ],
-            "description": "Guzzle promises library",
-            "keywords": [
-                "promise"
-            ],
-            "support": {
-                "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.6.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/Nyholm",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/promises",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-10-18T12:46:59+00:00"
-        },
-        {
-            "name": "guzzlehttp/psr7",
-            "version": "2.13.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/psr7.git",
-                "reference": "adee536f95101929f262b8c59e8a61472f347d58"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/adee536f95101929f262b8c59e8a61472f347d58",
-                "reference": "adee536f95101929f262b8c59e8a61472f347d58",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2.5 || ^8.0",
-                "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.1 || ^2.0",
-                "ralouphie/getallheaders": "^3.0",
-                "symfony/deprecation-contracts": "^2.5 || ^3.0",
-                "symfony/polyfill-php80": "^1.25"
-            },
-            "provide": {
-                "psr/http-factory-implementation": "1.0",
-                "psr/http-message-implementation": "1.0"
-            },
-            "require-dev": {
-                "bamarni/composer-bin-plugin": "^1.8.2",
-                "http-interop/http-factory-tests": "1.1.0",
-                "jshttp/mime-db": "1.54.0.1",
-                "phpunit/phpunit": "^8.5.52 || ^9.6.34"
-            },
-            "suggest": {
-                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
-            },
-            "type": "library",
-            "extra": {
-                "bamarni-bin": {
-                    "bin-links": true,
-                    "forward-command": false
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "hello@gjcampbell.co.uk",
-                    "homepage": "https://github.com/GrahamCampbell"
-                },
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                },
-                {
-                    "name": "George Mponos",
-                    "email": "gmponos@gmail.com",
-                    "homepage": "https://github.com/gmponos"
-                },
-                {
-                    "name": "Tobias Nyholm",
-                    "email": "tobias.nyholm@gmail.com",
-                    "homepage": "https://github.com/Nyholm"
-                },
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com",
-                    "homepage": "https://github.com/sagikazarmark"
-                },
-                {
-                    "name": "Tobias Schultze",
-                    "email": "webmaster@tubo-world.de",
-                    "homepage": "https://github.com/Tobion"
-                },
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com",
-                    "homepage": "https://sagikazarmark.hu"
-                }
-            ],
-            "description": "PSR-7 message implementation that also provides common utility methods",
-            "keywords": [
-                "http",
-                "message",
-                "psr-7",
-                "request",
-                "response",
-                "stream",
-                "uri",
-                "url"
-            ],
-            "support": {
-                "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.13.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/Nyholm",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-10-17T23:49:46+00:00"
-        },
-        {
             "name": "latte/latte",
             "version": "v3.1.7",
             "source": {
@@ -2642,127 +1356,6 @@
                 "source": "https://github.com/nette/latte/tree/v3.1.7"
             },
             "time": "2026-10-22T00:09:27+00:00"
-        },
-        {
-            "name": "league/oauth2-client",
-            "version": "2.9.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "8cedfef9d01a8d1fd2ecfabb41734b17592c4b71"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/8cedfef9d01a8d1fd2ecfabb41734b17592c4b71",
-                "reference": "8cedfef9d01a8d1fd2ecfabb41734b17592c4b71",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "guzzlehttp/guzzle": "^6.5.8 || ^7.8.2 || ^8.0",
-                "guzzlehttp/psr7": "^1.9.1 || ^2.6.3 || ^3.0",
-                "php": "^7.1 || >=8.0.0 <8.6.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.3.5",
-                "php-parallel-lint/php-parallel-lint": "^1.4",
-                "phpunit/phpunit": "^7 || ^8 || ^9 || ^10 || ^11",
-                "squizlabs/php_codesniffer": "^3.11"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Bilbie",
-                    "email": "hello@alexbilbie.com",
-                    "homepage": "http://www.alexbilbie.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Woody Gilk",
-                    "homepage": "https://github.com/shadowhand",
-                    "role": "Contributor"
-                }
-            ],
-            "description": "OAuth 2.0 Client Library",
-            "keywords": [
-                "Authentication",
-                "SSO",
-                "authorization",
-                "identity",
-                "idp",
-                "oauth",
-                "oauth2",
-                "single sign on"
-            ],
-            "support": {
-                "issues": "https://github.com/thephpleague/oauth2-client/issues",
-                "source": "https://github.com/thephpleague/oauth2-client/tree/2.9.1"
-            },
-            "time": "2026-09-16T13:14:31+00:00"
-        },
-        {
-            "name": "league/oauth2-google",
-            "version": "5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth2-google.git",
-                "reference": "23ba9a808fd88d7c9a9fdec5548c4861b3a4b295"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/23ba9a808fd88d7c9a9fdec5548c4861b3a4b295",
-                "reference": "23ba9a808fd88d7c9a9fdec5548c4861b3a4b295",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": "^2.0 || ^3.0",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "eloquent/phony-phpunit": "^6.0 || ^7.1",
-                "phpunit/phpunit": "^8.0 || ^9.0",
-                "squizlabs/php_codesniffer": "^3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Woody Gilk",
-                    "email": "hello@shadowhand.com",
-                    "homepage": "https://shadowhand.com"
-                }
-            ],
-            "description": "Google OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-            "keywords": [
-                "Authentication",
-                "authorization",
-                "client",
-                "google",
-                "oauth",
-                "oauth2"
-            ],
-            "support": {
-                "issues": "https://github.com/thephpleague/oauth2-google/issues",
-                "source": "https://github.com/thephpleague/oauth2-google/tree/5.0.0"
-            },
-            "time": "2026-03-23T14:25:21+00:00"
         },
         {
             "name": "nette/application",
@@ -2948,21 +1541,21 @@
         },
         {
             "name": "nette/caching",
-            "version": "v3.4.2",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/caching.git",
-                "reference": "31f4bc6b366e6896998bd4538b26fa88a627bf2b"
+                "reference": "03619feb69580472ab0ba44c7730d4e74e68e86c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/caching/zipball/31f4bc6b366e6896998bd4538b26fa88a627bf2b",
-                "reference": "31f4bc6b366e6896998bd4538b26fa88a627bf2b",
+                "url": "https://api.github.com/repos/nette/caching/zipball/03619feb69580472ab0ba44c7730d4e74e68e86c",
+                "reference": "03619feb69580472ab0ba44c7730d4e74e68e86c",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^4.0",
-                "php": "8.1 - 8.5"
+                "php": "8.1 - 8.6"
             },
             "conflict": {
                 "latte/latte": "<3.0.12"
@@ -3004,44 +1597,42 @@
                 {
                     "name": "David Grudl",
                     "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "⏱ Nette Caching: library with easy-to-use API and many cache backends.",
-            "homepage": "https://nette.org",
+            "description": "⚡ Nette Caching: a cache with an easy API and smart invalidation by expiration, tags, priorities or file changes. Storages for files, SQLite, Memcached and memory.",
+            "homepage": "https://doc.nette.org/caching",
             "keywords": [
                 "cache",
-                "journal",
+                "cache invalidation",
+                "caching",
                 "memcached",
                 "nette",
+                "psr-16",
                 "sqlite"
             ],
             "support": {
                 "issues": "https://github.com/nette/caching/issues",
-                "source": "https://github.com/nette/caching/tree/v3.4.2"
+                "source": "https://github.com/nette/caching/tree/v3.4.3"
             },
-            "time": "2026-05-12T01:08:42+00:00"
+            "time": "2026-10-27T18:39:00+00:00"
         },
         {
             "name": "nette/component-model",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/component-model.git",
-                "reference": "23ad9cf94f004348e1bd02af3ecffa8d9cd2bf84"
+                "reference": "58d06c8bac089fa81727d0ca457cd7345c14bcff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/component-model/zipball/23ad9cf94f004348e1bd02af3ecffa8d9cd2bf84",
-                "reference": "23ad9cf94f004348e1bd02af3ecffa8d9cd2bf84",
+                "url": "https://api.github.com/repos/nette/component-model/zipball/58d06c8bac089fa81727d0ca457cd7345c14bcff",
+                "reference": "58d06c8bac089fa81727d0ca457cd7345c14bcff",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^4.0",
-                "php": "8.1 - 8.5"
+                "php": "8.1 - 8.6"
             },
             "require-dev": {
                 "nette/phpstan-rules": "^1.0",
@@ -3074,23 +1665,21 @@
                 {
                     "name": "David Grudl",
                     "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "⚛ Nette Component Model",
-            "homepage": "https://nette.org",
+            "description": "🧩 Nette Component Model: the tree of named components that presenters, controls and forms in Nette are built on.",
+            "homepage": "https://doc.nette.org/component-model",
             "keywords": [
+                "component tree",
                 "components",
+                "composite",
                 "nette"
             ],
             "support": {
                 "issues": "https://github.com/nette/component-model/issues",
-                "source": "https://github.com/nette/component-model/tree/v3.2.0"
+                "source": "https://github.com/nette/component-model/tree/v3.2.1"
             },
-            "time": "2026-05-26T10:35:41+00:00"
+            "time": "2026-10-29T02:49:43+00:00"
         },
         {
             "name": "nette/di",
@@ -3170,23 +1759,23 @@
         },
         {
             "name": "nette/forms",
-            "version": "v3.2.9",
+            "version": "v3.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/forms.git",
-                "reference": "b749e9c2cd259a8ac75d444137f1caf94ec644ef"
+                "reference": "917696a769a794cc3ae0b6212da07c21d95bc521"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/forms/zipball/b749e9c2cd259a8ac75d444137f1caf94ec644ef",
-                "reference": "b749e9c2cd259a8ac75d444137f1caf94ec644ef",
+                "url": "https://api.github.com/repos/nette/forms/zipball/917696a769a794cc3ae0b6212da07c21d95bc521",
+                "reference": "917696a769a794cc3ae0b6212da07c21d95bc521",
                 "shasum": ""
             },
             "require": {
                 "nette/component-model": "^3.1",
                 "nette/http": "^3.3",
                 "nette/utils": "^4.0.4",
-                "php": "8.1 - 8.5"
+                "php": "8.1 - 8.6"
             },
             "conflict": {
                 "latte/latte": ">=3.0.0 <3.0.12 || >=3.2"
@@ -3228,27 +1817,23 @@
                 {
                     "name": "David Grudl",
                     "homepage": "https://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "📝 Nette Forms: generating, validating and processing secure forms in PHP. Handy API, fully customizable, server & client side validation and mature design.",
-            "homepage": "https://nette.org",
+            "description": "📝 Nette Forms: secure forms with one set of validation rules for server and browser, CSRF protection, and rendering done automatically or by hand in Latte.",
+            "homepage": "https://doc.nette.org/forms",
             "keywords": [
                 "Forms",
-                "bootstrap",
+                "client-side validation",
                 "csrf",
-                "javascript",
-                "nette",
-                "validation"
+                "form builder",
+                "form validation",
+                "nette"
             ],
             "support": {
                 "issues": "https://github.com/nette/forms/issues",
-                "source": "https://github.com/nette/forms/tree/v3.2.9"
+                "source": "https://github.com/nette/forms/tree/v3.2.10"
             },
-            "time": "2026-05-26T15:09:08+00:00"
+            "time": "2026-10-29T03:16:50+00:00"
         },
         {
             "name": "nette/http",
@@ -4371,166 +2956,6 @@
             "time": "2021-11-05T16:47:00+00:00"
         },
         {
-            "name": "psr/http-client",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-client.git",
-                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-client/zipball/bb5906edc1c324c9a05aa0873d40117941e5fa90",
-                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.0 || ^8.0",
-                "psr/http-message": "^1.0 || ^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP clients",
-            "homepage": "https://github.com/php-fig/http-client",
-            "keywords": [
-                "http",
-                "http-client",
-                "psr",
-                "psr-18"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/http-client"
-            },
-            "time": "2023-09-23T14:17:50+00:00"
-        },
-        {
-            "name": "psr/http-factory",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
-                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1",
-                "psr/http-message": "^1.0 || ^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
-            "keywords": [
-                "factory",
-                "http",
-                "message",
-                "psr",
-                "psr-17",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/http-factory"
-            },
-            "time": "2024-04-15T12:06:14+00:00"
-        },
-        {
-            "name": "psr/http-message",
-            "version": "2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2 || ^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "https://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP messages",
-            "homepage": "https://github.com/php-fig/http-message",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "support": {
-                "source": "https://github.com/php-fig/http-message/tree/2.0"
-            },
-            "time": "2023-04-04T09:54:51+00:00"
-        },
-        {
             "name": "psr/log",
             "version": "3.0.2",
             "source": {
@@ -4579,50 +3004,6 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.2"
             },
             "time": "2024-09-11T13:17:53+00:00"
-        },
-        {
-            "name": "ralouphie/getallheaders",
-            "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "120b605dfeb996808c31b6477290a714d356e822"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
-                "reference": "120b605dfeb996808c31b6477290a714d356e822",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^5 || ^6.5"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/getallheaders.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph Khattar",
-                    "email": "ralph.khattar@gmail.com"
-                }
-            ],
-            "description": "A polyfill for getallheaders.",
-            "support": {
-                "issues": "https://github.com/ralouphie/getallheaders/issues",
-                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
-            },
-            "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "spomky-labs/otphp",
@@ -4696,16 +3077,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.4.48",
+            "version": "v6.4.49",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "c9c4cf6745e8b25db27466f59cf126ac8d3db3a4"
+                "reference": "e918c95b70bdfa09148054a71c82c2858ae82efd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/c9c4cf6745e8b25db27466f59cf126ac8d3db3a4",
-                "reference": "c9c4cf6745e8b25db27466f59cf126ac8d3db3a4",
+                "url": "https://api.github.com/repos/symfony/console/zipball/e918c95b70bdfa09148054a71c82c2858ae82efd",
+                "reference": "e918c95b70bdfa09148054a71c82c2858ae82efd",
                 "shasum": ""
             },
             "require": {
@@ -4770,7 +3151,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v6.4.48"
+                "source": "https://github.com/symfony/console/tree/v6.4.49"
             },
             "funding": [
                 {
@@ -4790,7 +3171,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-07T08:10:34+00:00"
+            "time": "2026-10-28T10:54:25+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -5199,90 +3580,6 @@
             "time": "2026-10-28T09:35:49+00:00"
         },
         {
-            "name": "symfony/polyfill-php80",
-            "version": "v1.43.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "9c6a5d6b01ca51d486c813e9a9c0ed55f208bb74"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/9c6a5d6b01ca51d486c813e9a9c0ed55f208bb74",
-                "reference": "9c6a5d6b01ca51d486c813e9a9c0ed55f208bb74",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php80\\": ""
-                },
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ion Bazan",
-                    "email": "ion.bazan@gmail.com"
-                },
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.43.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-09-25T15:50:05+00:00"
-        },
-        {
             "name": "symfony/polyfill-php84",
             "version": "v1.43.0",
             "source": {
@@ -5444,16 +3741,16 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v7.4.16",
+            "version": "v7.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "c3dce76a6697c6428f7d80d5cd1cf0aa5d9679f3"
+                "reference": "b45cfcfe0abdbba37350645dae148be29b94f25a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/c3dce76a6697c6428f7d80d5cd1cf0aa5d9679f3",
-                "reference": "c3dce76a6697c6428f7d80d5cd1cf0aa5d9679f3",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/b45cfcfe0abdbba37350645dae148be29b94f25a",
+                "reference": "b45cfcfe0abdbba37350645dae148be29b94f25a",
                 "shasum": ""
             },
             "require": {
@@ -5501,7 +3798,7 @@
                 "reflection"
             ],
             "support": {
-                "source": "https://github.com/symfony/property-access/tree/v7.4.16"
+                "source": "https://github.com/symfony/property-access/tree/v7.4.22"
             },
             "funding": [
                 {
@@ -5521,20 +3818,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-30T12:37:26+00:00"
+            "time": "2026-10-26T21:52:50+00:00"
         },
         {
             "name": "symfony/property-info",
-            "version": "v7.4.20",
+            "version": "v7.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-info.git",
-                "reference": "d24c4c810b1285c5d8d77c6fd7b25e714479bd48"
+                "reference": "25c1b823ee4e0995e57e49bc0160c43ea199a7b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-info/zipball/d24c4c810b1285c5d8d77c6fd7b25e714479bd48",
-                "reference": "d24c4c810b1285c5d8d77c6fd7b25e714479bd48",
+                "url": "https://api.github.com/repos/symfony/property-info/zipball/25c1b823ee4e0995e57e49bc0160c43ea199a7b5",
+                "reference": "25c1b823ee4e0995e57e49bc0160c43ea199a7b5",
                 "shasum": ""
             },
             "require": {
@@ -5591,7 +3888,7 @@
                 "validator"
             ],
             "support": {
-                "source": "https://github.com/symfony/property-info/tree/v7.4.20"
+                "source": "https://github.com/symfony/property-info/tree/v7.4.22"
             },
             "funding": [
                 {
@@ -5611,7 +3908,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-28T09:47:41+00:00"
+            "time": "2026-10-25T14:40:16+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -5768,16 +4065,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v7.4.21",
+            "version": "v7.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "9bc35d074ad16a58c21cd52b18c5cacc4f4c3981"
+                "reference": "8dff7da3a56638f1d189c5368183294102de4ced"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/9bc35d074ad16a58c21cd52b18c5cacc4f4c3981",
-                "reference": "9bc35d074ad16a58c21cd52b18c5cacc4f4c3981",
+                "url": "https://api.github.com/repos/symfony/string/zipball/8dff7da3a56638f1d189c5368183294102de4ced",
+                "reference": "8dff7da3a56638f1d189c5368183294102de4ced",
                 "shasum": ""
             },
             "require": {
@@ -5835,7 +4132,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v7.4.21"
+                "source": "https://github.com/symfony/string/tree/v7.4.22"
             },
             "funding": [
                 {
@@ -5855,20 +4152,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-03T15:15:30+00:00"
+            "time": "2026-10-23T16:51:52+00:00"
         },
         {
             "name": "symfony/type-info",
-            "version": "v7.4.20",
+            "version": "v7.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/type-info.git",
-                "reference": "bbaaf3366400f5c85f66800b955c77b46e8abad2"
+                "reference": "f69ab198af73e1aac485c0ff5aa066d20c14adf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/type-info/zipball/bbaaf3366400f5c85f66800b955c77b46e8abad2",
-                "reference": "bbaaf3366400f5c85f66800b955c77b46e8abad2",
+                "url": "https://api.github.com/repos/symfony/type-info/zipball/f69ab198af73e1aac485c0ff5aa066d20c14adf0",
+                "reference": "f69ab198af73e1aac485c0ff5aa066d20c14adf0",
                 "shasum": ""
             },
             "require": {
@@ -5918,7 +4215,7 @@
                 "type"
             ],
             "support": {
-                "source": "https://github.com/symfony/type-info/tree/v7.4.20"
+                "source": "https://github.com/symfony/type-info/tree/v7.4.22"
             },
             "funding": [
                 {
@@ -5938,20 +4235,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-28T12:19:37+00:00"
+            "time": "2026-10-24T08:22:23+00:00"
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v7.4.18",
+            "version": "v7.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "d6a87acbe48cbc707b9aba7f1a6c2215aab02603"
+                "reference": "6c967db30708068f6eaedb6ed37973bd86de2241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/d6a87acbe48cbc707b9aba7f1a6c2215aab02603",
-                "reference": "d6a87acbe48cbc707b9aba7f1a6c2215aab02603",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/6c967db30708068f6eaedb6ed37973bd86de2241",
+                "reference": "6c967db30708068f6eaedb6ed37973bd86de2241",
                 "shasum": ""
             },
             "require": {
@@ -5999,7 +4296,7 @@
                 "serialize"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v7.4.18"
+                "source": "https://github.com/symfony/var-exporter/tree/v7.4.22"
             },
             "funding": [
                 {
@@ -6019,7 +4316,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-23T10:03:40+00:00"
+            "time": "2026-10-22T14:50:44+00:00"
         },
         {
             "name": "tracy/tracy",
@@ -6202,25 +4499,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "clown/ai": 20,
-        "clown/api": 20,
-        "clown/articles": 20,
-        "clown/blocks": 20,
-        "clown/blog": 20,
-        "clown/cache": 20,
-        "clown/core": 20,
-        "clown/front-extras": 20,
-        "clown/gallery": 20,
-        "clown/google-auth": 20,
-        "clown/log": 20,
-        "clown/podcast": 20,
-        "clown/portfolio": 20,
-        "clown/post": 20,
-        "clown/redirect": 20,
-        "clown/reviews": 20,
-        "clown/revisions": 20,
-        "clown/taxonomy": 20,
-        "clown/webmcp": 20
+        "clown/core": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

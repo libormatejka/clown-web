@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Smoke test clown-webu: veřejné stránky, přihlášení do administrace a načtení admin stránek.
+Smoke test clown-webu (core-only): veřejné stránky, přihlášení do administrace a načtení admin stránek.
 
 Použití: python3 tools/smoke-test.py <email> <heslo> [base-url]
 
@@ -78,29 +78,6 @@ check('/admin/page/create', 200, 'Přidat stránku', expect_layout=True)
 check('/admin/page/update/1', 200, 'Upravit stránku', expect_layout=True)
 check('/admin/profile/', 200, email, expect_layout=True)
 check('/preview/stranka/o-nas/', 200, 'Náhled stránky')
-check('/admin/redirect/', 200, 'Přesměrování', expect_layout=True)
-check('/admin/redirect/create', 200, 'Přidat přesměrování', expect_layout=True)
-check('/admin/block/', 200, 'Seznam blocků', expect_layout=True)
-check('/admin/block/create', 200, 'Přidat block', expect_layout=True)
-check('/admin/tag/', 200, 'Seznam štítků', expect_layout=True)
-check('/admin/tag/create', 200, 'Vytvořit štítek', expect_layout=True)
-check('/admin/category/', 200, 'Seznam kategorií', expect_layout=True)
-check('/admin/category/create', 200, 'Vytvořit kategorii', expect_layout=True)
-check('/admin/gallery/', 200, 'Všechny galerie', expect_layout=True)
-check('/admin/gallery/create', 200, 'Vytvořit galerii', expect_layout=True)
-check('/admin/article/', 200, 'Seznam článků', expect_layout=True)
-check('/admin/article/create', 200, 'Napsat článek', expect_layout=True)
-check('/admin/portfolio/', 200, 'Výpis portfolií', expect_layout=True)
-check('/admin/portfolio/create', 200, 'Vytvořit portfolio', expect_layout=True)
-check('/admin/podcast/', 200, 'Seznam epizod podcastu', expect_layout=True)
-check('/admin/podcast/create', 200, 'Přidat epizodu podcastu', expect_layout=True)
-check('/admin/blog/', 200, 'Seznam příspěvků na blogu', expect_layout=True)
-check('/admin/blog/create', 200, 'Přidat příspěvek na blog', expect_layout=True)
-check('/admin/post/', 200, 'Seznam příspěvků', expect_layout=True)
-check('/admin/post/create', 200, 'Napsat příspěvek', expect_layout=True)
-check('/admin/review/', 200, 'Seznam recenzí', expect_layout=True)
-check('/admin/review/create', 200, 'Napsat recenzi', expect_layout=True)
-check('/admin/api-log/', 200, 'Seznam api logů', expect_layout=True)
 check('/admin/user/', 200, 'Seznam uživatelů', expect_layout=True)
 check('/admin/user/create', 200, 'Vytvořit uživatele', expect_layout=True)
 check('/admin/menu/', 200, 'Seznam menu', expect_layout=True)

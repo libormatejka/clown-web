@@ -1,29 +1,11 @@
 {
 	"name": "libormatejka/clown-web",
-	"description": "Minimální ukázkový web postavený na clown/core (Fáze 7 Krok B – test přenositelnosti Clown CMS)",
+	"description": "Minimální ukázkový web postavený jen na clown/core (core-only větev)",
 	"type": "project",
 	"license": "proprietary",
 	"require": {
 		"php": ">=8.2",
 		"clown/core": "dev-main",
-		"clown/redirect": "dev-main",
-		"clown/blocks": "dev-main",
-		"clown/taxonomy": "dev-master",
-		"clown/log": "dev-master",
-		"clown/cache": "dev-main",
-		"clown/revisions": "dev-master",
-		"clown/front-extras": "dev-master",
-		"clown/gallery": "dev-master",
-		"clown/articles": "dev-master",
-		"clown/portfolio": "dev-master",
-		"clown/podcast": "dev-master",
-		"clown/blog": "dev-master",
-		"clown/post": "dev-master",
-		"clown/reviews": "dev-master",
-		"clown/api": "dev-master",
-		"clown/webmcp": "dev-master",
-		"clown/google-auth": "dev-master",
-		"clown/ai": "dev-master",
 		"contributte/console": "^0.10",
 		"doctrine/dbal": "^4.0",
 		"doctrine/migrations": "^3.8",
@@ -60,96 +42,6 @@
 			"type": "vcs",
 			"url": "https://github.com/libormatejka/clown-core.git",
 			"name": "clown/core"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-redirect.git",
-			"name": "clown/redirect"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-blocks.git",
-			"name": "clown/blocks"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-taxonomy.git",
-			"name": "clown/taxonomy"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-log.git",
-			"name": "clown/log"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-cache.git",
-			"name": "clown/cache"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-revisions.git",
-			"name": "clown/revisions"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-front-extras.git",
-			"name": "clown/front-extras"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-gallery.git",
-			"name": "clown/gallery"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-articles.git",
-			"name": "clown/articles"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-portfolio.git",
-			"name": "clown/portfolio"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-podcast.git",
-			"name": "clown/podcast"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-blog.git",
-			"name": "clown/blog"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-post.git",
-			"name": "clown/post"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-reviews.git",
-			"name": "clown/reviews"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-api.git",
-			"name": "clown/api"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-webmcp.git",
-			"name": "clown/webmcp"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-google-auth.git",
-			"name": "clown/google-auth"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/libormatejka/clown-ai.git",
-			"name": "clown/ai"
 		}
 	]
 }
