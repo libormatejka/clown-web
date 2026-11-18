@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:libormatejka/clown-core.git",
-                "reference": "e0c987eba23f0684d582834b747180b8f2dab51b"
+                "reference": "6d5986a280d2893032b56d2b9c52f529546ee455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/e0c987eba23f0684d582834b747180b8f2dab51b",
-                "reference": "e0c987eba23f0684d582834b747180b8f2dab51b",
+                "url": "https://api.github.com/repos/libormatejka/clown-core/zipball/6d5986a280d2893032b56d2b9c52f529546ee455",
+                "reference": "6d5986a280d2893032b56d2b9c52f529546ee455",
                 "shasum": ""
             },
             "require": {
@@ -117,7 +117,7 @@
                 "source": "https://github.com/libormatejka/clown-core/tree/main",
                 "issues": "https://github.com/libormatejka/clown-core/issues"
             },
-            "time": "2026-11-18T20:56:00+00:00"
+            "time": "2026-11-18T21:19:57+00:00"
         },
         {
             "name": "contributte/console",
