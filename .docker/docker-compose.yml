@@ -4,7 +4,7 @@ services:
     image: mariadb:11.8.1-ubi9-rc
     environment:
       - MARIADB_ROOT_PASSWORD=root
-      - MARIADB_DATABASE=clownweb
+      - MARIADB_DATABASE=clownweb_coreonly
     volumes:
       - dbdata:/var/lib/mysql
     ports:
