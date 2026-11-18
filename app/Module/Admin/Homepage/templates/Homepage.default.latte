@@ -1,0 +1,276 @@
+{block content}
+<div class="bg-white">
+	<div class="px-4 sm:px-6 lg:mx-auto lg:px-8">
+		<div class="py-6 md:flex md:items-center md:justify-between border-b lg:border-t lg:border-gray-200">
+			<div class="min-w-0 flex-1">
+				<div class="flex items-center">
+					<div>
+						<div class="flex items-center">
+							<h1 class="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:leading-9">Ahoj{if $firstname} {$firstname}{/if}, jak se vede?</h1>
+						</div>
+						<dl class="mt-6 flex flex-col sm:ml-3 sm:mt-1 sm:flex-row sm:flex-wrap">
+							<dt class="sr-only">Date</dt>
+							<dd class="flex items-center text-sm font-medium text-gray-500 sm:mr-6">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="mr-1.5 h-5 w-5 shrink-0 text-gray-900">
+									<path fill-rule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z" clip-rule="evenodd" />
+								</svg>
+								Dnes je {$datetime->format("d. m. Y")}
+							</dd>
+							<dd class="mt-3 flex items-center text-sm font-medium text-gray-500 sm:mr-6 sm:mt-0">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-1.5 h-5 w-5 shrink-0 text-dark">
+									<path fill-rule="evenodd" d="M8.603 3.799A4.49 4.49 0 0112 2.25c1.357 0 2.573.6 3.397 1.549a4.49 4.49 0 013.498 1.307 4.491 4.491 0 011.307 3.497A4.49 4.49 0 0121.75 12a4.49 4.49 0 01-1.549 3.397 4.491 4.491 0 01-1.307 3.497 4.491 4.491 0 01-3.497 1.307A4.49 4.49 0 0112 21.75a4.49 4.49 0 01-3.397-1.549 4.49 4.49 0 01-3.498-1.306 4.491 4.491 0 01-1.307-3.498A4.49 4.49 0 012.25 12c0-1.357.6-2.573 1.549-3.397a4.49 4.49 0 011.307-3.497 4.49 4.49 0 013.497-1.307zm7.007 6.387a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+								</svg>
+								Aktivní účet
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="mt-6 flex space-x-3 md:mt-0 md:ml-4">
+				<a n:href="Profile:default" type="button" class="inline-flex items-center rounded-md border border-gray-700 bg-white px-4 py-3 text-sm font-medium text-gray-900 shadow-xs hover:bg-gray-50 focus:outline-hidden">Zobrazit profil</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="px-4 sm:px-6 lg:px-8">
+	{control flashes $flashes}
+</div>
+
+<div class="mt-8">
+	<div class="mt-6 px-4 sm:px-6 lg:px-8">
+		<h2 class="font-bold leading-6 text-black">Základní statistiky</h2>
+
+		<div class="bg-white">
+			<div class="mx-auto mt-5">
+				<div class="grid grid-cols-1 gap-px bg-gray-900/5 sm:grid-cols-3 rounded border border-gray-200">
+					<div class="bg-white px-4 py-6 sm:px-6 lg:px-8">
+						<p class="text-sm/6 font-medium text-gray-500">Počet stránek</p>
+						<p class="mt-2 flex items-baseline gap-x-2">
+							<span class="text-4xl font-semibold tracking-tight text-gray-900"><a href="{plink Page:default}" class="hover:underline">{$pagesCount}</a></span>
+						</p>
+					</div>
+					<div class="bg-white px-4 py-6 sm:px-6 lg:px-8">
+						<p class="text-sm/6 font-medium text-gray-500">Počet souborů</p>
+						<p class="mt-2 flex items-baseline gap-x-2">
+							<span class="text-4xl font-semibold tracking-tight text-gray-900"><a href="{plink MediaLibrary:default}" class="hover:underline">{$mediaCount}</a></span>
+						</p>
+					</div>
+					<div class="bg-white px-4 py-6 sm:px-6 lg:px-8">
+						<p class="text-sm/6 font-medium text-gray-500">Počet uživatelů</p>
+						<p class="mt-2 flex items-baseline gap-x-2">
+							<span class="text-4xl font-semibold tracking-tight text-gray-900"><a href="{plink User:default}" class="hover:underline">{$usersCount}</a></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mt-8">
+	<div class="mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="font-bold leading-6 text-black">Celkový přehled</h2>
+
+		<div class="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 2xl:grid-cols-3">
+
+			<div class="overflow-hidden rounded-lg bg-white shadow-sm border flex justify-between flex-col">
+				<div>
+					<div class="bg-gray-50 border-b-1 border-dotted py-5 px-2 sm:px-6 flex flex-wrap items-center justify-between sm:flex-nowrap">
+						<div class="mt-0">
+							<h3 class="font-medium leading-6 text-gray-900 text-md">Nejnovější stránky</h3>
+						</div>
+						<div class="ml-4 mt-0 shrink-0">
+							<a type="button" n:href="Page:create" class="border-b-3 border-black border-solid pb-1 font-bold text-md">Vytvořit stránku</a>
+						</div>
+					</div>
+
+					<ul role="list" class="divide-y divide-gray-200 max-h-80 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-700 overflow-y-scroll">
+						{if count($pages) > 0}
+						{foreach $pages as $page}
+						<li>
+							<a n:href=":Front:Preview:Page $page->getSlug()" target="_blank" class="block hover:bg-gray-50">
+								<div class="flex items-center px-4 py-4 sm:px-6">
+									<div class="flex min-w-0 flex-1 items-center">
+										<div class="shrink-0">
+											<img loading="lazy" n:if="$page->getThumbnail()" class="h-12 w-12 rounded-full object-cover" src="{$presenter->getThumbnailSrc($page->getThumbnail())}" alt="">
+										</div>
+										<div class="min-w-0 flex-1 px-4 md:grid">
+											<div>
+												<p class="font-medium text-md">{$page->getTitle()}</p>
+												<p class="mt-2 flex items-center text-sm text-gray-500" n:if="$page->getPublishedAt()">
+													<span class="text-sm italic">{$page->getPublishedAt()->format('d.m.Y H:i')}</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div>
+										<svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+											<path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+										</svg>
+									</div>
+								</div>
+							</a>
+						</li>
+						{breakIf $iterator->counter == 29}
+						{/foreach}
+						{else}
+						<li>
+							<a n:href="Page:create" class="block hover:bg-gray-50">
+								<div class="flex items-center px-4 py-4 sm:px-6">
+									<div class="min-w-0 flex-1 px-4 md:grid">
+										<div>
+											<p class="text-sm font-medium text-indigo-600">Nejsou žádné stránky</p>
+											<p class="mt-2 flex items-center text-sm text-gray-500">Vytvořit stránku</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						{/if}
+					</ul>
+				</div>
+
+				<div class="bg-gray-25 px-5 py-3 sm:px-6">
+					<div class="text-sm">
+						<a n:href="Page:default" class="font-medium text-cyan-700 hover:text-cyan-900">Zobrazit všechny stránky</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="overflow-hidden rounded-lg bg-white shadow-sm border flex justify-between flex-col">
+				<div>
+					<div class="bg-gray-50 border-b-1 border-dotted py-5 px-2 sm:px-6 flex flex-wrap items-center justify-between sm:flex-nowrap">
+						<div class="mt-0">
+							<h3 class="font-medium leading-6 text-gray-900 text-md">Nejnovější soubory</h3>
+						</div>
+						<div class="ml-4 mt-0 shrink-0">
+							<a type="button" n:href="MediaLibrary:create" class="border-b-3 border-black border-solid pb-1 font-bold text-md">Nahrát soubor</a>
+						</div>
+					</div>
+
+					<ul role="list" class="divide-y divide-gray-200 max-h-80 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-700 overflow-y-scroll">
+						{if count($files) > 0}
+						{foreach $files as $file}
+						<li>
+							<a n:href="MediaLibrary:detail $file->getId()" class="block hover:bg-gray-50">
+								<div class="flex items-center px-4 py-4 sm:px-6">
+									<div class="flex min-w-0 flex-1 items-center">
+										<div class="shrink-0">
+											<img loading="lazy" class="h-12 w-12 rounded-full object-cover" src="{$presenter->getThumbnailSrc($file)}" alt="">
+										</div>
+										<div class="min-w-0 flex-1 px-4 md:grid">
+											<div>
+												<p class="font-medium text-md">{$file->getTitle()}</p>
+												<p class="mt-2 flex items-center text-sm text-gray-500" n:if="$file->getPublishedAt()">
+													<span class="text-sm italic">{$file->getPublishedAt()->format('d.m.Y H:i')}</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div>
+										<svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+											<path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+										</svg>
+									</div>
+								</div>
+							</a>
+						</li>
+						{breakIf $iterator->counter == 29}
+						{/foreach}
+						{else}
+						<li>
+							<a n:href="MediaLibrary:create" class="block hover:bg-gray-50">
+								<div class="flex items-center px-4 py-4 sm:px-6">
+									<div class="min-w-0 flex-1 px-4 md:grid">
+										<div>
+											<p class="text-sm font-medium text-indigo-600">Nejsou žádné soubory</p>
+											<p class="mt-2 flex items-center text-sm text-gray-500">Nahrát soubor</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						{/if}
+					</ul>
+				</div>
+
+				<div class="bg-gray-25 px-5 py-3 sm:px-6">
+					<div class="text-sm">
+						<a n:href="MediaLibrary:default" class="font-medium text-cyan-700 hover:text-cyan-900">Zobrazit všechny soubory</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="overflow-hidden rounded-lg bg-white shadow-sm border flex justify-between flex-col">
+				<div>
+					<div class="bg-gray-50 border-b-1 border-dotted py-5 px-2 sm:px-6 flex flex-wrap items-center justify-between sm:flex-nowrap">
+						<div class="mt-0">
+							<h3 class="font-medium leading-6 text-gray-900 text-md">Nejnovější uživatelé</h3>
+						</div>
+						<div class="ml-4 mt-0 shrink-0">
+							<a type="button" n:href="User:create" class="border-b-3 border-black border-solid pb-1 font-bold text-md">Vytvořit uživatele</a>
+						</div>
+					</div>
+
+					<ul role="list" class="divide-y divide-gray-200 max-h-80 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-700 overflow-y-scroll">
+						{if count($users) > 0}
+						{foreach $users as $listedUser}
+						<li>
+							<a n:href="User:update $listedUser->getId()" class="block hover:bg-gray-50">
+								<div class="flex items-center px-4 py-4 sm:px-6">
+									<div class="flex min-w-0 flex-1 items-center">
+										<div class="shrink-0">
+											<div class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+												<svg class="h-6 w-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+													<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A6.483 6.483 0 0010 16.5a6.483 6.483 0 004.793-2.11A5.99 5.99 0 0010 12z" clip-rule="evenodd"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="min-w-0 flex-1 px-4 md:grid">
+											<div>
+												<p class="font-medium text-md">{$listedUser->getFirstname()} {$listedUser->getLastname()}</p>
+												<p class="mt-2 flex items-center text-sm text-gray-500">
+													<span class="text-sm italic">{$listedUser->getEmail()}</span>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div>
+										<svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+											<path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+										</svg>
+									</div>
+								</div>
+							</a>
+						</li>
+						{breakIf $iterator->counter == 29}
+						{/foreach}
+						{else}
+						<li>
+							<a n:href="User:create" class="block hover:bg-gray-50">
+								<div class="flex items-center px-4 py-4 sm:px-6">
+									<div class="min-w-0 flex-1 px-4 md:grid">
+										<div>
+											<p class="text-sm font-medium text-indigo-600">Nejsou žádní uživatelé</p>
+											<p class="mt-2 flex items-center text-sm text-gray-500">Vytvořit uživatele</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						{/if}
+					</ul>
+				</div>
+
+				<div class="bg-gray-25 px-5 py-3 sm:px-6">
+					<div class="text-sm">
+						<a n:href="User:default" class="font-medium text-cyan-700 hover:text-cyan-900">Zobrazit všechny uživatele</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+{/block}
