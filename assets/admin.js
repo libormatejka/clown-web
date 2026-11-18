@@ -42,3 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		new MediaModal();
 	}
 });
+
+// Closing the user menu when clicking anywhere outside of it (or its button)
+document.addEventListener('DOMContentLoaded', () => {
+	document.addEventListener('click', (event) => {
+		const userMenuButton = document.getElementById('user-menu-button');
+		const userMenu = document.querySelector('[aria-labelledby="user-menu-button"]');
+
+		if (!userMenuButton || !userMenu || userMenuButton.getAttribute('aria-expanded') !== 'true') {
+			return;
+		}
+
+		if (userMenuButton.contains(event.target) || userMenu.contains(event.target)) {
+			return;
+		}
+
+		userMenu.classList.add('hidden');
+		userMenuButton.setAttribute('aria-expanded', 'false');
+	});
+});
