@@ -48,7 +48,35 @@ katalog, stručněji, je i v tomto repu v `README.md`.
 
 | Balíček | Namespace | Závisí na | Co dává |
 |---|---|---|---|
-| `clown/core` | `Clown\Core\` | — | Admin chrome (presentery, komponenty, layouty), `AdminMenuRegistry`/`RouteRegistry`/`ContentProviderRegistry`/`TaggableRegistry`/`AdminEntityLinkRegistry`, `TemplateOverrideResolver`, auth extension point (`AuthenticatorPipeline`, `IOAuthLoginProvider`), core entity `User`/`MediaLibrary`, `Previewable`/`Loggable` marker rozhraní, `CoreRoutes::admin()`/`front()`. |
+| `clown/core` | `Clown\Core\` | — | Admin chrome (presentery, komponenty, layouty), `AdminMenuRegistry`/`RouteRegistry`/`ContentProviderRegistry`/`TaggableRegistry`/`AdminEntityLinkRegistry`, `TemplateOverrideResolver`, auth extension point (`AuthenticatorPipeline`, `IOAuthLoginProvider`), core entity `User`/`MediaLibrary` + funkční Media Library admin modul (upload, mazání s rollbackem, náhledy — viz níž), `Previewable`/`Loggable` marker rozhraní, `CoreRoutes::admin()`/`front()`. |
+
+#### Media Library (`Admin:MediaLibrary`, `/admin/media-library/...`)
+
+Portováno z `collectorboy` (`app/Model/Service/{Upload,MediaUpload,MediaDelete,
+ThumbnailGenerate,MediaSession}`), zbaveno GraphQL resolver vrstvy a vazby na
+Category/Tag/Gallery (core na ně nemá tvrdou vazbu — viz komentář u
+`Entity\MediaLibrary::$categoryId`).
+
+- **Jednotlivý upload**: `Admin:MediaLibrary:create` → `CreateMediaLibrary`.
+- **Hromadný drag&drop upload**: `Admin:MediaLibrary:createMediaLibraries` →
+  `CreateMediaLibraries` + `MediaUploader` (AJAX signály `uploadFile!`/
+  `getSessionFiles!`/`removeFile!`, soubory dočasně v `www/media/temp/` +
+  PHP session, než se formulář odešle). JS (`MediaUploader.js`,
+  `clown-core-assets`) musí být naimportovaný a inicializovaný v webu
+  (`assets/admin.js`, hledá `#mediaDropZone`) — **balíček sám JS nikam
+  nenapojuje**, to je vždy úkol webu.
+- **Velikosti náhledů**: `clownCore.mediaSizes` (config, libovolné názvy →
+  `{width, height, quality}`), generují se při uploadu do `metaData['sizes']`
+  na entitě. **Gotcha**: `MediaUploader` (hromadný upload) má natvrdo
+  zadrátovaný název `article-thumb` pro náhled v upload-listu (zůstalo
+  z collectorboy) — pokud ho web v `mediaSizes` nedefinuje, spadne to na
+  zobrazení celého originálu (funguje, jen bez zmenšení).
+- **Mazání**: `MediaDeleteService::deleteWithRollback()` — soubory se před
+  smazáním zazálohují do `backup_{id}_{čas}/`, při chybě se vrátí zpět.
+- **Mimo rozsah (vědomě)**: `MediaModal` (JS picker pro výběr obrázku v
+  `PageForm` místo `<select>`) zůstává prázdný stub — JS (`MediaModal.js`)
+  už v `clown-core-assets` existuje, čeká na PHP API endpoint
+  (`/api/v1/media-library...`) a markup, které ještě nikdo nenapsal.
 
 ### Infrastrukturní addony (bez content entity)
 
@@ -129,8 +157,9 @@ DI registrace (je jediná implementace).
 **Typovaný value object místo raw parametru** — když balíček potřebuje
 skalární site-specific hodnotu (web title, media library dir, API pepper),
 dostane tenký typovaný wrapper registrovaný v core/addonu (`WebTitle`,
-`MediaLibraryDir`, `ApiPepper`, `ApiDebugMode`) místo `string`/`Settings`
-objektu — autowirable odkudkoli bez per-konzument registrace.
+`MediaLibraryDir`, `MediaLibraryPath`, `MediaSizes`, `ApiPepper`,
+`ApiDebugMode`) místo `string`/`Settings` objektu — autowirable odkudkoli
+bez per-konzument registrace.
 
 ## Jak postavit nový web na Clown CMS (nebo rozšířit tenhle)
 
@@ -207,6 +236,31 @@ objektu — autowirable odkudkoli bez per-konzument registrace.
 - Balíčky žijí jako samostatné git repozitáře pod `github.com/libormatejka/
   clown-*`; lokální vývoj typicky přes composer/npm `path`/`vcs` repozitáře
   mountnuté do kontejnerů (viz `.docker/docker-compose.yml`).
+- **Víceslovné presentery v URL jsou dash-separated, ne camelCase ani
+  lowercase** — `Nette\Application\Routers\Route::path2presenter()` dělá
+  `MediaLibrary` → `media-library` (a zpětně). Generická admin routa
+  (`CoreRoutes::admin()`: `admin/<presenter>/<action>`) tohle řeší
+  automaticky přes `{link}`/`{plink}`, ale při ručním psaní URL (curl,
+  testy) je potřeba `/admin/media-library/`, ne `/admin/medialibrary/`
+  ani `/admin/mediaLibrary/` — jinak `BadRequestException`/404.
+- **`www/media/` musí být writable pro `www-data`** (`chmod -R a+rwX
+  www/media` v PHP kontejneru) — stejný důvod jako `temp`/`log` výš, jinak
+  `Nette\IOException` při prvním uploadu (vytváření `temp/<session>/`
+  podsložky).
+- **PHP image potřebuje `gd` extension** (`docker-php-ext-install gd` +
+  `libjpeg-turbo-dev`/`libpng-dev`/`libwebp-dev`/`freetype-dev` v Dockerfilu)
+  pro `Nette\Utils\Image` — bez něj upload obrázku spadne při generování
+  náhledů (resize).
+- **`webpack.config.js`: TinyMCE content CSS nesmí jít přes
+  `MiniCssExtractPlugin`** — `TinymceEditor.js` (`clown-core-assets`)
+  importuje `tinymce/skins/{ui/oxide,content/default}/content.css` a volá
+  na tom `.toString()` (potřebuje čistý text pro `content_style`, ne
+  extrahovaný CSS modul). Obecné `.css` pravidlo musí tyhle dva soubory
+  `exclude`ovat a mít pro ně vlastní pravidlo `type: 'asset/source'` —
+  jinak `admin.js` spadne na `Cannot read properties of undefined
+  (reading 'toString')` hned při načtení stránky a **celý admin JS
+  (nejen TinyMCE) se tím zastaví**, protože je to synchronní chyba na
+  top-level modulu.
 
 ## Kde hledat víc
 

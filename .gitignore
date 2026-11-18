@@ -7,6 +7,8 @@
 /config/local.neon
 /config/manifest-assets.json
 /www/assets/
+/www/media/*
+!/www/media/.gitkeep
 /.docker/data/
 /auth.json
 .phpunit.result.cache

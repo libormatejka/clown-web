@@ -21,6 +21,7 @@ final class RouterFactory
 	{
 		$router = new RouteList();
 		$router->add(CoreRoutes::admin());
+		$router->add(CoreRoutes::api());
 		$router->add($routeRegistry->createRouteList());
 		$router->add(CoreRoutes::front());
 

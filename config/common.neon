@@ -6,6 +6,15 @@ parameters:
 	uploadsSettings:
 		mediaLibraryDir: /media
 		mediaLibraryPath: %wwwDir%/media
+		mediaSizes:
+			admin-thumb:
+				width: 320
+				height: 180
+				quality: 85
+			article-thumb:
+				width: 320
+				height: 180
+				quality: 85
 
 	version:
 		css: 0.1.0
@@ -17,6 +26,8 @@ extensions:
 clownCore:
 	templateOverrideDir: %appDir%/templates/override
 	mediaLibraryDir: %uploadsSettings.mediaLibraryDir%
+	mediaLibraryPath: %uploadsSettings.mediaLibraryPath%
+	mediaSizes: %uploadsSettings.mediaSizes%
 	webTitle: %WEB.name%
 	pageLayouts:
 		one-column: 'Jeden sloupec'

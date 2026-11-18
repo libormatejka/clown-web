@@ -30,7 +30,14 @@ module.exports = () => ({
 				type: 'javascript/auto',
 			},
 			{
+				// TinyMCE načítá tyto dva CSS soubory jako čistý text (`.toString()`) pro `content_style`,
+				// ne jako běžný CSS modul — musí mít vlastní pravidlo před obecným `.css` pravidlem.
+				test: /tinymce[/\\]skins[/\\].*content\.css$/,
+				type: 'asset/source',
+			},
+			{
 				test: /\.css$/,
+				exclude: /tinymce[/\\]skins[/\\].*content\.css$/,
 				use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
 			},
 		],
