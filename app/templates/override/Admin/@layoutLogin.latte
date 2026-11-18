@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs" class="h-full">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Přihlášení | {$webTitle}</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+	{if ($adminAssets['admin.css'] ?? null) !== null}
+		<link rel="stylesheet" href="{$adminAssets['admin.css']}"/>
+	{/if}
+	{foreach ['runtime.js', 'admin.js'] as $asset}
+		<script n:if="($adminAssets[$asset] ?? null) !== null" src="{$adminAssets[$asset]}"></script>
+	{/foreach}
+</head>
+<body class="bg-gray-100 h-full">
+
+	<div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+		<div class="w-full max-w-lg space-y-8">
+			<h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Vítejte v administraci</h2>
+
+			{control flashes $flashes}
+
+			{include content}
+		</div>
+	</div>
+</body>
+</html>

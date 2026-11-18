@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs" class="h-full bg-gray-100">
+<head>
+	{control metaTags}
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+	{foreach ['admin.css', 'tinymce.css'] as $asset}
+		<link n:if="($adminAssets[$asset] ?? null) !== null" rel="stylesheet" href="{$adminAssets[$asset]}"/>
+	{/foreach}
+	{foreach ['runtime.js', 'admin.js', 'tinymce.js'] as $asset}
+		<script n:if="($adminAssets[$asset] ?? null) !== null" src="{$adminAssets[$asset]}"></script>
+	{/foreach}
+</head>
+
+<body class="h-full bg-white">
+	<div class="min-h-full">
+
+		{control sidebar}
+
+		<div class="flex flex-1 flex-col lg:pl-64 bg-white">
+			<div class="flex h-16 shrink-0 border-b border-gray-200 bg-white lg:border-none">
+				<div class="flex flex-1 justify-end px-4 sm:px-6 lg:px-8">
+					<div class="ml-4 flex items-center gap-4 md:ml-6">
+						<button type="button" class="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-hidden focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+							<span class="sr-only">View notifications</span>
+							<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"></path>
+							</svg>
+						</button>
+
+						<a href="/" target="_blank" class="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-hidden focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+							<span class="sr-only">Redirect to website</span>
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
+							</svg>
+						</a>
+
+						{control topBarProfile}
+					</div>
+				</div>
+			</div>
+
+			<main class="flex-1 pb-8">
+				{include content}
+			</main>
+		</div>
+	</div>
+</body>
+</html>
