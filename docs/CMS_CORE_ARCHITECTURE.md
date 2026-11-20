@@ -48,7 +48,7 @@ katalog, stručněji, je i v tomto repu v `README.md`.
 
 | Balíček | Namespace | Závisí na | Co dává |
 |---|---|---|---|
-| `clown/core` | `Clown\Core\` | — | Admin chrome (presentery, komponenty, layouty), `AdminMenuRegistry`/`RouteRegistry`/`ContentProviderRegistry`/`TaggableRegistry`/`AdminEntityLinkRegistry`, `TemplateOverrideResolver`, auth extension point (`AuthenticatorPipeline`, `IOAuthLoginProvider`), core entity `User`/`MediaLibrary` + funkční Media Library admin modul (upload, mazání s rollbackem, náhledy — viz níž), `Previewable`/`Loggable` marker rozhraní, `CoreRoutes::admin()`/`front()`. |
+| `clown/core` | `Clown\Core\` | — | Admin chrome (presentery, komponenty, layouty), `AdminMenuRegistry`/`RouteRegistry`/`ContentProviderRegistry`/`TaggableRegistry`/`AdminEntityLinkRegistry`, `TemplateOverrideResolver`, auth extension point (`AuthenticatorPipeline`, `IOAuthLoginProvider`), core entity `User`/`MediaLibrary` + funkční Media Library admin modul (upload, mazání s rollbackem, náhledy — viz níž), `Previewable`/`Loggable` marker rozhraní, `CoreRoutes::admin()`/`front()`. Auditní log (`clown/log` zanikl, je v core): entity `Log` a `LogType` (tabulky `log`, `log_type`), `EntityLogSubscriber` (automaticky loguje create/update/delete entit implementujících `Loggable`), `ManualLogService`/`ManualLogHook` (ruční záznamy, např. přihlášení a odhlášení přes `IManualLogHook`), `AdminAuditHook` (předá HTTP request a přihlášeného uživatele do subscriberu). Admin stránka „Log aktivit“ a karta na dashboardu jsou v tomto webu, ne v core. |
 
 #### Media Library (`Admin:MediaLibrary`, `/admin/media-library/...`)
 
@@ -98,7 +98,6 @@ Category/Tag/Gallery (core na ně nemá tvrdou vazbu — viz komentář u
 | `clown/gallery` | `Clown\Gallery\` | core, taxonomy | `Gallery`, `GalleryTag`, `GalleryMediaLibrary`. |
 | `clown/redirect` | `Clown\Redirect\` | core | `Redirect` (301/302). |
 | `clown/blocks` | `Clown\Blocks\` | core | `Block` (vlastní HTML/JS vkládaný přes URL/shortcode). |
-| `clown/log` | `Clown\Log\` | core | `Log`, `LogType`, `EntityLogSubscriber`, `ManualLogService` — generický audit log (entity se připojují přes `Loggable`). |
 | `clown/articles` | `Clown\Articles\` | core, taxonomy, gallery | `Article`, `ArticleTag`. |
 | `clown/portfolio` | `Clown\Portfolio\` | core, taxonomy | `Portfolio`, `PortfolioTag`. |
 | `clown/podcast` | `Clown\Podcast\` | core, taxonomy, gallery | `Podcast`, `PodcastTag`. |
