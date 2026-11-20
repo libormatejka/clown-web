@@ -270,6 +270,61 @@
 				</div>
 			</div>
 
+			<div class="overflow-hidden rounded-lg bg-white shadow-sm border flex justify-between flex-col">
+				<div>
+					<div class="bg-gray-50 border-b-1 border-dotted py-5 px-2 sm:px-6 flex flex-wrap items-center justify-between sm:flex-nowrap">
+						<div class="mt-0">
+							<h3 class="font-medium leading-6 text-gray-900 text-md">Poslední aktivita</h3>
+						</div>
+					</div>
+
+					<ul role="list" class="divide-y divide-gray-200 max-h-80 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-700 overflow-y-scroll">
+						{if count($logs) > 0}
+						{foreach $logs as $log}
+						<li>
+							<a n:href="Log:default" class="block hover:bg-gray-50">
+								<div class="flex items-center px-4 py-4 sm:px-6">
+									<div class="min-w-0 flex-1 px-4 md:grid">
+										<div>
+											<p class="font-medium text-md">{$log->getLogType()->getText()}</p>
+											<p class="mt-2 flex items-center text-sm text-gray-500">
+												<span class="text-sm italic">{$log->getPublishedAt()?->format('d.m.Y H:i') ?? '—'}{if $log->getUser()} · {$log->getUser()->getEmail()}{/if}</span>
+											</p>
+										</div>
+									</div>
+									<div>
+										<svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+											<path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+										</svg>
+									</div>
+								</div>
+							</a>
+						</li>
+						{/foreach}
+						{else}
+						<li>
+							<a n:href="Log:default" class="block hover:bg-gray-50">
+								<div class="flex items-center px-4 py-4 sm:px-6">
+									<div class="min-w-0 flex-1 px-4 md:grid">
+										<div>
+											<p class="text-sm font-medium text-indigo-600">Zatím žádná aktivita</p>
+											<p class="mt-2 flex items-center text-sm text-gray-500">Zobrazit log aktivit</p>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
+						{/if}
+					</ul>
+				</div>
+
+				<div class="bg-gray-25 px-5 py-3 sm:px-6">
+					<div class="text-sm">
+						<a n:href="Log:default" class="font-medium text-cyan-700 hover:text-cyan-900">Zobrazit celý log</a>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>

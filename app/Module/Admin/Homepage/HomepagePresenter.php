@@ -3,6 +3,7 @@
 namespace App\Module\Admin\Homepage;
 
 use Clown\Core\Admin\AdminPresenter;
+use Clown\Core\Entity\Log;
 use Clown\Core\Entity\MediaLibrary;
 use Clown\Core\Entity\Page;
 use Clown\Core\Entity\User;
@@ -12,8 +13,8 @@ use Clown\Core\Settings\WebTitle;
 /**
  * Přebírá výchozí core dashboard (Clown\Core\Admin\Homepage\HomepagePresenter)
  * vlastní verzí podle dashboardu na collectorboy.cz/admin, adaptovanou na
- * core-only obsah (jen Page/MediaLibrary/User — bez postů, článků, recenzí,
- * štítků, kategorií a logu aktivit, které core nemá).
+ * core-only obsah (jen Page/MediaLibrary/User/Log — bez postů, článků, recenzí,
+ * štítků a kategorií, které core nemá).
  */
 final class HomepagePresenter extends AdminPresenter
 {
@@ -46,6 +47,9 @@ final class HomepagePresenter extends AdminPresenter
 
 		$this->template->users = $this->entityManager?->getRepository(User::class)
 			->findBy([], ['createdAt' => 'DESC'], 30) ?? [];
+
+		$this->template->logs = $this->entityManager?->getRepository(Log::class)
+			->findBy([], ['publishedAt' => 'DESC'], 10) ?? [];
 	}
 
 	public function getThumbnailSrc(?MediaLibrary $media): ?string
