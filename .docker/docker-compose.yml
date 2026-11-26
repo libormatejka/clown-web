@@ -25,7 +25,7 @@ services:
     environment:
       - PMA_HOST=mariadb
     ports:
-      - 8082:80
+      - 10000:80
 
   node:
     build:
@@ -44,7 +44,7 @@ services:
     environment:
       - NGINX_PHP_HOST=php
     ports:
-      - 8081:80
+      - 80:80
 
 volumes:
   dbdata:
