@@ -12,6 +12,49 @@
 > repozitářům `clown-web`, `url-shortener`, `clown-core`,
 > `clown-affiliate-shorturl` a `clown-core-assets`.
 
+## 0. Zadání (co chceme dosáhnout)
+
+Chceme provozovat více webů postavených na Clown CMS (dnes `clown-web` a
+`url-shortener`, další přibudou) tak, aby se **v každém webu řešil jen
+frontend**. Všechno ostatní má být jedno sdílené místo.
+
+**Co požadujeme**
+
+1. **Web = jen balíčky + vlastní frontend.** Do projektu webu se táhnou
+   balíčky; web sám neobsahuje kopii administrace ani infrastruktury.
+2. **Administrace je vždy stejná a vychází z balíčku.** Web v ní nemá mít
+   volnost. Design administrace (layout, styly, JS) je na jednom místě.
+   Upravím-li například homepage administrace, upravím ji jednou a změna se
+   dostane do všech webů.
+3. **Docker je na jednom místě.** Přidám-li do Dockeru nový nástroj (nedávno
+   phpMyAdmin), udělám to jednou a ne v každém projektu zvlášť.
+4. **Měnit jde jen frontend.** Vzhled veřejné části si každý web řeší
+   samostatně; to je jediné, v čem se weby mají lišit.
+
+**Proč**
+
+Dnes je druhý web kopie prvního a každá úprava administrace nebo Dockeru se
+musí dělat dvakrát (kapitola 1). S každým dalším webem se práce násobí a
+weby se rozcházejí. Cílem je, aby přidání webu bylo levné a údržba
+administrace a infrastruktury nerostla s počtem webů.
+
+**Kritéria úspěchu** (odvozená ze zadání)
+
+- Změna administrace nebo Dockeru se dělá na jednom místě a do webů se dostane
+  aktualizací balíčku, bez zásahu do kódu webu.
+- Nový web vznikne z tenkého základu (`composer.json`, konfigurace, front) a
+  nemusí kopírovat administraci, Docker ani build.
+- Web nemůže administraci přebít ani změnit, jen ji nastavit (název, logo,
+  zapnuté moduly).
+- Weby mohou běžet vedle sebe na jednom vývojovém stroji.
+
+**Přijatý kompromis**
+
+Změna na jednom místě se do webů nedostane okamžitě. Vydá se nová verze
+balíčku a ve webech se spustí `composer update`. Při vývoji to jde obejít
+lokálním `path` repozitářem se symlinkem. V produkci je to vědomé vydání, takže
+se administrace nerozbije všem webům najednou bez vědomí správce.
+
 ## 1. Výchozí stav (zjištěno v kódu)
 
 - **Druhý web je kopie prvního.** `url-shortener` vznikl z `clown-web`. Z 51
